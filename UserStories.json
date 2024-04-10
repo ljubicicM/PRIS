@@ -1,0 +1,530 @@
+{
+	"story_1": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da otvori nalog",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_2": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da se uloguje",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_3": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da pretražuje znamenitosti koje ga zanimaju",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_4": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da bira kriterijume za generisanje rute i vodiča uz nju",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_5": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da vidi postojeće rute",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_6": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani korisnik može da sortira putanju (po 3 kriterijuma)",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_7": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da pretrazuje znamenitosti koje ga zanimaju",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_8": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da bira kriterijume za generisanje rute i vodiča uz nju",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_9": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da sačuva ture koje je kreirao i da ih menja",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_10": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da učini svoju turu globalno vidljivom",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_11": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da vidi postojeće rute",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_12": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da sortira putanju (po 3 kriterijuma)",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_13": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da napravi izmene u redosledu putanje",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_14": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da traži da doda znamenitost",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_15": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da traži da doda umetnika",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_16": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da traži da doda delo",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_17": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da traži da uredi opis",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_18": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda znamenitost",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_19": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda umetnika",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_20": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda delo",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_21": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da uredi opis",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_22": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator ima pregled svih zahteva koje može da prihvati ili odbije",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_23": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Platforma spaja sadržaj u jedan dokument koji može da se preuzme",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_24": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "",
+		"part_of_sprint": "None",
+		"status": "TODO",
+		"assigned_to": "None",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da doda znamenitost",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	}
+}
