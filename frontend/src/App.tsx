@@ -13,7 +13,6 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/b" element={<Button label='Klikni' size='small' onClick={() => { }} />} />
           <Route path="/t" element={<Textfield headerText='email' size='medium' placeholder='mail@adress.com' />} />
-          <Route path="/hello" element={<p>Hello</p>} />
         </Routes>
       </Router>
     </div>
