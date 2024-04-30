@@ -1,9 +1,13 @@
 .textfield-container {
+    border: var(--text-color) 1px solid !important;
+    height: 50px !important;
+    border-radius: 5px !important;
+    background-color: var(--primary-color);
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: flex-start;
-    padding-left: 8px;
+    height: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 16px;
 }
 
 .textfield-container.large {
@@ -11,7 +15,7 @@
 }
 
 .textfield-container.medium {
-    width: 250px;
+    width: 265px;
 }
 
 .textfield-container.small {
@@ -19,25 +23,23 @@
 }
 
 .textfield-header {
-    font-size: 12px;
-    font-weight: 500;
-    color: #000000;
-    margin: 0;
-    padding: 0;
+    text-align: left;
     color: var(--text-color);
     font-family: var(--main-font);
     font-size: 12px;
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+    padding-left: 16px;
 }
 
 .textfield {
-    width: 97%;
+    outline: none !important;
+    border: none !important;
     background-color: var(--primary-color);
     color: var(--text-color);
-    border: var(--text-color) 2px solid;
-    border-radius: 5px;
-    height: 20px;
-    font-family: var(--main-font);
-    font-size: 16px;
     font-weight: 700;
+    font-size: 16px;
+    width: 97.5%;
 }
