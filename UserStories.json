@@ -4,18 +4,30 @@
 		"story_pts": "3",
 		"date_created": "13-04-2024",
 		"part_of_sprint": "1",
-		"status": "TODO",
+		"status": "DOING",
 		"date_started": "13-04-2024",
 		"date_completed": "None",
 		"story": "Neregistrovani korisnik može da otvori nalog",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try it with an empty",
+				"test": "Try it with a new username",
 				"status": "Fails"
 			},
 			{
-				"test": "Try it with ..",
+				"test": "Try it with an existing username",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with an empty input",
+				"status": "Fails"
+			},
+			{
+				"test": "Try submitting registration with correctly confirmed password",
+				"status": "Fails"
+			},
+			{
+				"test": "Try submitting registration with different confirmation password",
 				"status": "Fails"
 			}
 		]
@@ -25,18 +37,34 @@
 		"story_pts": "3",
 		"date_created": "13-04-2024",
 		"part_of_sprint": "1",
-		"status": "TODO",
+		"status": "DOING",
 		"date_started": "13-04-2024",
 		"date_completed": "None",
 		"story": "Neulogovani korisnik može da se uloguje",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try it with an empty",
+				"test": "Try logging in with a nonexistent username",
 				"status": "Fails"
 			},
 			{
-				"test": "Try it with ..",
+				"test": "Try logging in with wrong password",
+				"status": "Fails"
+			},
+			{
+				"test": "Try logging in with username and password pair that exist in database",
+				"status": "Fails"
+			},
+			{
+				"test": "Try logging in with a tourist account",
+				"status": "Fails"
+			},
+			{
+				"test": "Try logging in with a guide writter account",
+				"status": "Fails"
+			},
+			{
+				"test": "Try logging in with an administrator account",
 				"status": "Fails"
 			}
 		]
@@ -284,11 +312,15 @@
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try it with an empty",
+				"test": "Try it with an empty input",
 				"status": "Fails"
 			},
 			{
-				"test": "Try it with ..",
+				"test": "Try it with a new landmark",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with an existing landmark",
 				"status": "Fails"
 			}
 		]
