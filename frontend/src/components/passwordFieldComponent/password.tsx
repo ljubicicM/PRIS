@@ -24,7 +24,7 @@ export const PasswordField = ({ placeholder, header, className, value, setValue 
     return (
         <div>
             <p className="password-header">{header}</p>
-            <label className={"password-container " + className}>
+            <label className="password-container">
                 <input className="fieldP " value={value} onChange={e => setValue(e.target.value)} type={type} placeholder={placeholder}></input>
                 <img className="password-img" src={showPassword ? imageVisible : imageHidden}
                     onClick={() => handleVisibility()} alt=""></img>
