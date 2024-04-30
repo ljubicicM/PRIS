@@ -8,9 +8,11 @@ declare interface TextfieldProps {
 
 export const Textfield = ({ headerText, placeholder, size = 'large' }: TextfieldProps) => {
     return (
-        <div className={`textfield-container ${size}`} >
+        <div>
             <h1 className='textfield-header'>{headerText}</h1>
-            <input type='email' placeholder={placeholder} className={`textfield ${size}`} />
-        </div >
+            <div className={`textfield-container ${size}`} >
+                <input type='email' placeholder={placeholder} className={`textfield ${size}`} />
+            </div >
+        </div>
     )
 }
