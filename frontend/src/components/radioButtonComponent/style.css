@@ -3,7 +3,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 15px;
-    padding-left: 16px;
     align-items: center !important;
 }
 
@@ -24,5 +23,5 @@
 .radio-text {
     color: var(--text-color);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }

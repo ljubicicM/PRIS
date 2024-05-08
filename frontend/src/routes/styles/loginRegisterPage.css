@@ -1,0 +1,21 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 400px;
+    flex-direction: column;
+    background-color: var(--background-color-secondary);
+    margin-top: 75px;
+    border-radius: 10px;
+}
+
+.register-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container Button {
+    margin-top: 22px;
+}

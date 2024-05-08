@@ -2,16 +2,18 @@
 
 :root {
   --background-color: #c3bdb9;
+  --background-color-secondary: #8c827f;
   --primary-color: #e1dedc;
-  --text-color: #685951;
+  --text-color: #4d4033;
   --main-font: 'Open Sans', sans-serif;
   --radio-button-color: #8b6b78;
+  --disabled-color: #75757b;
 }
 
 body {
   overflow: hidden;
+  height: 100vh;
   margin: 0;
-  margin-top: -22px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
