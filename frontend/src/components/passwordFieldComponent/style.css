@@ -57,6 +57,9 @@ input[type="password"] {
     padding-left: 16px;
 }
 
-::placeholder {
+.fieldP::placeholder {
     color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.6;
 }

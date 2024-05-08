@@ -5,13 +5,14 @@ declare interface ButtonProps {
     imageUrl?: string;
     onClick?: () => void;
     size?: string;
+    isEnabeld?: boolean;
 }
 
-export const Button = ({ label, imageUrl, onClick, size = 'small' }: ButtonProps) => {
+export const Button = ({ label, imageUrl, onClick, size = 'small', isEnabeld }: ButtonProps) => {
     if (imageUrl) {
         return (
             <div className='button-container'>
-                <button className={size === 'small' ? 'button small' : 'button large'} onClick={() => onClick}>
+                <button disabled={!isEnabeld} className={size === 'small' ? 'button small' : 'button large'} onClick={() => onClick}>
                     <img src={imageUrl} alt=''></img>
                 </button>
             </div>
@@ -19,7 +20,7 @@ export const Button = ({ label, imageUrl, onClick, size = 'small' }: ButtonProps
     } else {
         return (
             <div className='button-container'>
-                <button className={size === 'small' ? 'button small' : 'button large'} onClick={() => onClick}>{label}</button>
+                <button disabled={!isEnabeld} className={size === 'small' ? 'button small' : 'button large'} onClick={() => onClick}>{label}</button>
             </div>
         );
     }

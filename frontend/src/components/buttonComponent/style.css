@@ -1,9 +1,17 @@
 .button {
     border: var(--text-color) 1px solid;
     border-radius: 10px;
-    height: 20px;
+    height: 30px;
     background-color: var(--primary-color);
     color: var(--text-color);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.button:disabled {
+    background-color: var(--disabled-color);
+    font-weight: 800;
+    cursor: not-allowed;
 }
 
 .button.small {
