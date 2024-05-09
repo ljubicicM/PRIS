@@ -1,0 +1,27 @@
+.radio-button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    align-items: center !important;
+}
+
+.radio-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+}
+
+.radio {
+    accent-color: var(--radio-button-color);
+    height: 17px;
+    width: 17px;
+}
+
+.radio-text {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+}
