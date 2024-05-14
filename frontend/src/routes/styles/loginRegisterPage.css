@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 675px;
+    height: 750px;
     width: 400px;
     flex-direction: column;
     background-color: var(--background-color);

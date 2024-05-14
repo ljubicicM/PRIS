@@ -4,8 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1080px;
-  zoom: 75%;
+  height: 100vh;
 }
 
 .App-logo {
