@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 675px;
     width: 400px;
     flex-direction: column;
-    background-color: var(--background-color-secondary);
-    margin-top: 75px;
+    background-color: var(--background-color);
+    margin-top: 40px;
     border-radius: 10px;
 }
 

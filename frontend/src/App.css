@@ -1,8 +1,11 @@
 .App {
   text-align: center;
-  background-color: var(--background-color);
-  height: 100vh;
-  width: 100vw;
+  background-image: url(assets/images/background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1080px;
+  zoom: 75%;
 }
 
 .App-logo {
