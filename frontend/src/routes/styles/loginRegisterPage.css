@@ -19,3 +19,26 @@
 .register-container Button {
     margin-top: 22px;
 }
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    margin-top: 200px;
+    border-radius: 10px;
+}
+
+.login-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-container Button {
+    margin-top: 22px;
+}

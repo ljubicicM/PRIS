@@ -3,7 +3,7 @@ import './style.css';
 declare interface ButtonProps {
     label?: string;
     imageUrl?: string;
-    onClick?: () => void;
+    onClick?: any;
     size?: string;
     isEnabeld?: boolean;
 }
@@ -20,7 +20,7 @@ export const Button = ({ label, imageUrl, onClick, size = 'small', isEnabeld }: 
     } else {
         return (
             <div className='button-container'>
-                <button disabled={!isEnabeld} className={size === 'small' ? 'button small' : 'button large'} onClick={() => onClick}>{label}</button>
+                <button disabled={!isEnabeld} className={size === 'small' ? 'button small' : 'button large'} onClick={onClick}>{label}</button>
             </div>
         );
     }
