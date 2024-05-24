@@ -15,13 +15,17 @@ export const LoginPage = () => {
         return (password.length > 0)
     }
 
+    const handleLogin = () => {
+
+    }
+
     return (
         <div className='login-container-outer'>
             <div className='login-container'>
                 <h1>Log in</h1>
                 <Textfield value={email} setValue={setEmail} size='medium' placeholder="email" headerText="Email" />
                 <PasswordField value={password} setValue={setPassword} placeholder="************" header="Password" />
-                <Button isEnabeld={checkPassword() && checkEmail()} label="Log in" onClick={() => {alert('Logged in')}} size='large' />
+                <Button isEnabeld={checkPassword() && checkEmail()} label="Log in" onClick={() => handleLogin()} size='large' />
             </div>
         </div>
     );
