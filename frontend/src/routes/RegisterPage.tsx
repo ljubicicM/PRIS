@@ -24,7 +24,6 @@ export const RegisterPage = () => {
     }
 
     const handleRegister = () => {
-        console.log(username, password, email, phoneNumber, radioValue)
         axios.post('http://localhost:8082/user/register', {
             username: username as string,
             password: password as string,

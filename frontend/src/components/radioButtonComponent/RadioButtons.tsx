@@ -9,7 +9,6 @@ declare interface RadioButtonsProps {
 export const RadioButtons = ({ labels, name, setValue }: RadioButtonsProps) => {
     const handleChange = (e: any) => {
         setValue(e.target.value);
-        console.log(e.target.value)
     }
     const children = labels.map((label, index) => {
         return (
