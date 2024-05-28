@@ -34,32 +34,32 @@ public class Route implements Serializable {
 		return this.routeName;
 	}
 
-	public void setRouteName(String nazivRuta) {
-		this.routeName = nazivRuta;
+	public void setRouteName(String routeName) {
+		this.routeName = routeName;
 	}
 
 	public String getRouteDescription() {
 		return this.routeDescription;
 	}
 
-	public void setRouteDescription(String opisRuta) {
-		this.routeDescription = opisRuta;
+	public void setRouteDescription(String routeDescription) {
+		this.routeDescription = routeDescription;
 	}
 
 	public int getRouteDuration() {
 		return this.routeDuration;
 	}
 
-	public void setRouteDuration(int trajanjeRuta) {
-		this.routeDuration = trajanjeRuta;
+	public void setRouteDuration(int routeDuration) {
+		this.routeDuration = routeDuration;
 	}
 
 	public byte getRouteVisibility() {
 		return this.routeVisibility;
 	}
 
-	public void setRouteVisibility(byte vidljivostRuta) {
-		this.routeVisibility = vidljivostRuta;
+	public void setRouteVisibility(byte routeVisibility) {
+		this.routeVisibility = routeVisibility;
 	}
 
 }

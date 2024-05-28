@@ -3,10 +3,6 @@ package Backend.model;
 import java.io.Serializable;
 import jakarta.persistence.*;
 
-/**
- * The primary key class for the ruta database table.
- * 
- */
 @Embeddable
 public class RoutePK implements Serializable {
 	//default serial version id, required for serializable classes.
@@ -21,8 +17,8 @@ public class RoutePK implements Serializable {
 	public int getIdRoute() {
 		return this.idRoute;
 	}
-	public void setIdRoute(int idRuta) {
-		this.idRoute = idRuta;
+	public void setIdRoute(int idRoute) {
+		this.idRoute = idRoute;
 	}
 	public int getUser_idUser() {
 		return this.user_idUser;

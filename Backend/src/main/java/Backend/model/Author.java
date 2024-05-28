@@ -36,16 +36,16 @@ public class Author implements Serializable {
 		return this.nameAuthor;
 	}
 
-	public void setNameAuthor(String imeAuthor) {
-		this.nameAuthor = imeAuthor;
+	public void setNameAuthor(String nameAuthor) {
+		this.nameAuthor = nameAuthor;
 	}
 
 	public String getSurnameAuthor() {
 		return this.surnameAuthor;
 	}
 
-	public void setSurnameAuthor(String prezimeAuthor) {
-		this.surnameAuthor = prezimeAuthor;
+	public void setSurnameAuthor(String surnameAuthor) {
+		this.surnameAuthor = surnameAuthor;
 	}
 
 	public String getText1Author() {

@@ -3,8 +3,6 @@ package Backend.model;
 import java.io.Serializable;
 import jakarta.persistence.*;
 
-
-
 @Entity
 @NamedQuery(name="User.findAll", query="SELECT u FROM User u")
 public class User implements Serializable {

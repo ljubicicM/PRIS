@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-
 @Entity
 @NamedQuery(name="SignificantEvent.findAll", query="SELECT z FROM SignificantEvent z")
 public class SignificantEvent implements Serializable {
@@ -16,19 +15,19 @@ public class SignificantEvent implements Serializable {
 	private int idSignificantEvent;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date datumDogadjaj;
+	private Date eventDate;
 
-	private String nazivDogadjaj;
+	private String eventName;
 
-	private String text1Dogadjaj;
+	private String text1Event;
 
-	private String text2Dogadjaj;
+	private String text2Event;
 
-	private String text3Dogadjaj;
+	private String text3Event;
 
 	//bi-directional many-to-one association to Epoha
-	@OneToMany(mappedBy="znacajnidogadjaj")
-	private List<Epoha> epohas;
+	@OneToMany(mappedBy="significantEvent")
+	private List<Epoch> epochs;
 
 	public SignificantEvent() {
 	}
@@ -37,70 +36,70 @@ public class SignificantEvent implements Serializable {
 		return this.idSignificantEvent;
 	}
 
-	public void setIdSignificantEvent(int idZnacajniDogadjaj) {
-		this.idSignificantEvent = idZnacajniDogadjaj;
+	public void setIdSignificantEvent(int idSignificantEvent) {
+		this.idSignificantEvent = idSignificantEvent;
 	}
 
-	public Date getDatumDogadjaj() {
-		return this.datumDogadjaj;
+	public Date getEventDate() {
+		return this.eventDate;
 	}
 
-	public void setDatumDogadjaj(Date datumDogadjaj) {
-		this.datumDogadjaj = datumDogadjaj;
+	public void setEventDate(Date eventDate) {
+		this.eventDate = eventDate;
 	}
 
-	public String getNazivDogadjaj() {
-		return this.nazivDogadjaj;
+	public String getEventName() {
+		return this.eventName;
 	}
 
-	public void setNazivDogadjaj(String nazivDogadjaj) {
-		this.nazivDogadjaj = nazivDogadjaj;
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
 	}
 
-	public String getText1Dogadjaj() {
-		return this.text1Dogadjaj;
+	public String getText1Event() {
+		return this.text1Event;
 	}
 
-	public void setText1Dogadjaj(String text1Dogadjaj) {
-		this.text1Dogadjaj = text1Dogadjaj;
+	public void setText1Event(String text1Event) {
+		this.text1Event = text1Event;
 	}
 
-	public String getText2Dogadjaj() {
-		return this.text2Dogadjaj;
+	public String getText2Event() {
+		return this.text2Event;
 	}
 
-	public void setText2Dogadjaj(String text2Dogadjaj) {
-		this.text2Dogadjaj = text2Dogadjaj;
+	public void setText2Event(String text2Event) {
+		this.text2Event = text2Event;
 	}
 
-	public String getText3Dogadjaj() {
-		return this.text3Dogadjaj;
+	public String getText3Event() {
+		return this.text3Event;
 	}
 
-	public void setText3Dogadjaj(String text3Dogadjaj) {
-		this.text3Dogadjaj = text3Dogadjaj;
+	public void setText3Event(String text3Event) {
+		this.text3Event = text3Event;
 	}
 
-	public List<Epoha> getEpohas() {
-		return this.epohas;
+	public List<Epoch> getEpochs() {
+		return this.epochs;
 	}
 
-	public void setEpohas(List<Epoha> epohas) {
-		this.epohas = epohas;
+	public void setEpochs(List<Epoch> epochs) {
+		this.epochs = epochs;
 	}
 
-	public Epoha addEpoha(Epoha epoha) {
-		getEpohas().add(epoha);
-		epoha.setZnacajnidogadjaj(this);
+	public Epoch addEpoch(Epoch epoch) {
+		getEpochs().add(epoch);
+		epoch.setSignificantEvent(this);
 
-		return epoha;
+		return epoch;
 	}
 
-	public Epoha removeEpoha(Epoha epoha) {
-		getEpohas().remove(epoha);
-		epoha.setZnacajnidogadjaj(null);
+	public Epoch removeEpoch(Epoch epoch) {
+		getEpochs().remove(epoch);
+		epoch.setSignificantEvent(null);
 
-		return epoha;
+		return epoch;
 	}
 
 }
