@@ -1,90 +1,78 @@
-package backend.model;
+package Backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import java.io.Serializable;
+import jakarta.persistence.*;
+
+
 
 @Entity
-public class User {
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private String emailUser;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int idUser;
 
-    @Column(unique = true)
-    private String username;
+    private String passwordUser;
 
-    private String password;
-    private String email;
-    private String role;
-    private String phone;
+    private String phoneUser;
+
+    private String roleUser;
+
+    private String usernameUser;
 
     public User() {
-        super();
     }
 
-    public User(String username, String password, String email, String role, String phone) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.role = role;
-        this.phone = phone;
+    public String getEmailUser() {
+        return this.emailUser;
     }
 
-    public User(String username, String password, String email, String role) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.role = role;
+    public void setEmailUser(String emailUser) {
+        this.emailUser = emailUser;
     }
 
-    public int getId() {
-        return id;
+    public int getIdUser() {
+        return this.idUser;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPasswordUser() {
+        return this.passwordUser;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPasswordUser(String passwordUser) {
+        this.passwordUser = passwordUser;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPhoneUser() {
+        return this.phoneUser;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPhoneUser(String phoneUser) {
+        this.phoneUser = phoneUser;
     }
 
-    public String getEmail() {
-        return email;
+    public String getRoleUser() {
+        return this.roleUser;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRoleUser(String roleUser) {
+        this.roleUser = roleUser;
     }
 
-    public String getRole() {
-        return role;
+    public String getUsernameUser() {
+        return this.usernameUser;
     }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setUsernameUser(String usernameUser) {
+        this.usernameUser = usernameUser;
     }
 
 }

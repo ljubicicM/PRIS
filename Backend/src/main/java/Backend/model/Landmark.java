@@ -1,4 +1,4 @@
-package backend.model;
+package Backend.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
