@@ -24,4 +24,9 @@ public class UserController {
         userService.registerUser(user);
     }
 
+    @PostMapping("/login")
+    public void loginUser(@RequestBody String passwordUser, String emailUser) {
+        userService.loginUser(emailUser, passwordUser);
+    }
+
 }

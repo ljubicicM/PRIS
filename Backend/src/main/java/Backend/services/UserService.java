@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import Backend.model.User;
 import Backend.repositories.UserRepository;
 
+import java.util.Objects;
+
 @Service
 public class UserService {
 
@@ -18,5 +20,17 @@ public class UserService {
             return true;
         }
         return false;
+    }
+
+    public Boolean loginUser(String userEmail, String passwordUser){
+        if(userRepository.findByEmail(userEmail) == null)
+            return false;
+
+        User user = userRepository.findByEmail(userEmail);
+
+        if(Objects.equals(user.getPasswordUser(), passwordUser))
+            return false;
+
+        return true;
     }
 }
