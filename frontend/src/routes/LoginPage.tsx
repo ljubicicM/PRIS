@@ -3,8 +3,11 @@ import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import './styles/loginRegisterPage.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -14,9 +17,17 @@ export const LoginPage = () => {
     const checkPassword = () => {
         return (password.length > 0)
     }
-
     const handleLogin = () => {
-
+        axios.post('http://localhost:8082/user/login', {
+            passwordUser: password as string,
+            emailUser: email as string,
+        }).then((response) => {
+            if (response.data) {
+                navigate('/login');
+            }
+        }).catch((error) => {
+            console.log(error)
+        })
     }
 
     return (
