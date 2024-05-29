@@ -1,15 +1,16 @@
 package Backend.model;
 
-import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
-@NamedQuery(name="Author.findAll", query="SELECT a FROM Author a")
-public class Author implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Author {
 
 	@Id
-	private int idAuthor;
+	private int id;
 
 	private String nameAuthor;
 
@@ -21,15 +22,28 @@ public class Author implements Serializable {
 
 	private String text3Author;
 
+	@JsonIgnore
+	@OneToMany(mappedBy = "author")
+	private List<ArtPiece> artPieces;
+
 	public Author() {
 	}
 
-	public int getIdAuthor() {
-		return this.idAuthor;
+	public Author(String nameAuthor, String surnameAuthor, String text1Author, String text2Author,
+			String text3Author) {
+		this.nameAuthor = nameAuthor;
+		this.surnameAuthor = surnameAuthor;
+		this.text1Author = text1Author;
+		this.text2Author = text2Author;
+		this.text3Author = text3Author;
 	}
 
-	public void setIdAuthor(int idAuthor) {
-		this.idAuthor = idAuthor;
+	public int getid() {
+		return this.id;
+	}
+
+	public void setid(int id) {
+		this.id = id;
 	}
 
 	public String getNameAuthor() {
@@ -70,6 +84,14 @@ public class Author implements Serializable {
 
 	public void setText3Author(String text3Author) {
 		this.text3Author = text3Author;
+	}
+
+	public List<ArtPiece> getArtPieces() {
+		return this.artPieces;
+	}
+
+	public void setArtPieces(List<ArtPiece> artPieces) {
+		this.artPieces = artPieces;
 	}
 
 }

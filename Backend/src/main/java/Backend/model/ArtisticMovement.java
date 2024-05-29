@@ -1,16 +1,17 @@
 package Backend.model;
 
-import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
-@NamedQuery(name="ArtisticMovement.findAll", query="SELECT u FROM ArtisticMovement u")
-public class ArtisticMovement implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class ArtisticMovement {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idArtisticMovement;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	private String movementName;
 
@@ -20,15 +21,27 @@ public class ArtisticMovement implements Serializable {
 
 	private String text3Movement;
 
+	@JsonIgnore
+	@OneToMany(mappedBy = "artisticMovement")
+	private List<ArtPiece> artPieces;
+
 	public ArtisticMovement() {
 	}
 
-	public int getIdArtisticMovement() {
-		return this.idArtisticMovement;
+	public ArtisticMovement(String movementName, String text1Movement, String text2Movement,
+			String text3Movement) {
+		this.movementName = movementName;
+		this.text1Movement = text1Movement;
+		this.text2Movement = text2Movement;
+		this.text3Movement = text3Movement;
 	}
 
-	public void setIdArtisticMovement(int idArtisticMovement) {
-		this.idArtisticMovement = idArtisticMovement;
+	public int getid() {
+		return this.id;
+	}
+
+	public void setid(int id) {
+		this.id = id;
 	}
 
 	public String getMovementName() {
@@ -63,4 +76,11 @@ public class ArtisticMovement implements Serializable {
 		this.text3Movement = text3Movement;
 	}
 
+	public List<ArtPiece> getArtPieces() {
+		return this.artPieces;
+	}
+
+	public void setArtPieces(List<ArtPiece> artPieces) {
+		this.artPieces = artPieces;
+	}
 }

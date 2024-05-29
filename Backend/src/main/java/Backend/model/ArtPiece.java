@@ -1,14 +1,21 @@
 package Backend.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
 
 @Entity
-public class Landmark {
+public class ArtPiece {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,25 +29,41 @@ public class Landmark {
     private int xCoordinate;
     private int yCoordinate;
     private int retentionTime;
-    private int yearBuilt;
+    private int yearCreated;
 
     @Lob
     @Column(name = "image", columnDefinition = "BLOB")
     private byte[] image;
 
-    public Landmark() {
+    @OneToMany(mappedBy = "artPiece")
+    private List<Request> requests;
+
+    @ManyToOne
+    private ArtisticMovement artisticMovement;
+
+    @ManyToOne
+    private Epoch epoch;
+
+    @ManyToOne
+    private Author author;
+
+    @ManyToMany
+    @JoinTable(name = "artpiece_route", joinColumns = @JoinColumn(name = "artpiece_id"), inverseJoinColumns = @JoinColumn(name = "route_id"))
+    private List<Route> routes;
+
+    public ArtPiece() {
         super();
     }
 
-    public Landmark(String name, String address, String description, int xCoordinate, int yCoordinate,
-            int retentionTime, int yearBuilt, byte[] image) {
+    public ArtPiece(String name, String address, String description, int xCoordinate, int yCoordinate,
+            int retentionTime, int yearCreated, byte[] image) {
         this.name = name;
         this.address = address;
         this.description = description;
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.retentionTime = retentionTime;
-        this.yearBuilt = yearBuilt;
+        this.yearCreated = yearCreated;
         this.image = image;
     }
 
@@ -100,12 +123,12 @@ public class Landmark {
         this.retentionTime = retentionTime;
     }
 
-    public int getYearBuilt() {
-        return yearBuilt;
+    public int getyearCreated() {
+        return yearCreated;
     }
 
-    public void setYearBuilt(int yearBuilt) {
-        this.yearBuilt = yearBuilt;
+    public void setyearCreated(int yearCreated) {
+        this.yearCreated = yearCreated;
     }
 
     public byte[] getImage() {
@@ -114,6 +137,38 @@ public class Landmark {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public List<Request> getRequests() {
+        return requests;
+    }
+
+    public void setRequests(List<Request> requests) {
+        this.requests = requests;
+    }
+
+    public ArtisticMovement getArtisticMovement() {
+        return artisticMovement;
+    }
+
+    public void setArtisticMovement(ArtisticMovement artisticMovement) {
+        this.artisticMovement = artisticMovement;
+    }
+
+    public Epoch getEpoch() {
+        return epoch;
+    }
+
+    public void setEpoch(Epoch epoch) {
+        this.epoch = epoch;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
 }

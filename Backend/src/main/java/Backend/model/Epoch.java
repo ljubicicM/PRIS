@@ -1,15 +1,17 @@
 package Backend.model;
 
-import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
-@NamedQuery(name="Epoch.findAll", query="SELECT e FROM Epoch e")
-public class Epoch implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Epoch {
 
-	@EmbeddedId
-	private EpochPK id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	private String epochName;
 
@@ -23,14 +25,27 @@ public class Epoch implements Serializable {
 	@JoinColumn(name = "significant_event_id")
 	private SignificantEvent significantEvent;
 
+	@JsonIgnore
+	@OneToMany(mappedBy = "epoch")
+	private List<ArtPiece> artPieces;
+
 	public Epoch() {
 	}
 
-	public EpochPK getId() {
+	public Epoch(String epochName, String text1Epoch, String text2Epoch, String text3Epoch,
+			SignificantEvent significantEvent) {
+		this.epochName = epochName;
+		this.text1Epoch = text1Epoch;
+		this.text2Epoch = text2Epoch;
+		this.text3Epoch = text3Epoch;
+		this.significantEvent = significantEvent;
+	}
+
+	public int getId() {
 		return this.id;
 	}
 
-	public void setId(EpochPK id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -72,6 +87,14 @@ public class Epoch implements Serializable {
 
 	public void setSignificantEvent(SignificantEvent significantEvent) {
 		this.significantEvent = significantEvent;
+	}
+
+	public List<ArtPiece> getArtPieces() {
+		return this.artPieces;
+	}
+
+	public void setArtPieces(List<ArtPiece> artPieces) {
+		this.artPieces = artPieces;
 	}
 
 }

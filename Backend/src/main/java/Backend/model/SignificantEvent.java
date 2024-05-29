@@ -1,18 +1,15 @@
 package Backend.model;
 
-import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@NamedQuery(name="SignificantEvent.findAll", query="SELECT z FROM SignificantEvent z")
-public class SignificantEvent implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class SignificantEvent {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idSignificantEvent;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date eventDate;
@@ -25,19 +22,27 @@ public class SignificantEvent implements Serializable {
 
 	private String text3Event;
 
-	//bi-directional many-to-one association to Epoha
-	@OneToMany(mappedBy="significantEvent")
+	@OneToMany(mappedBy = "significantEvent")
 	private List<Epoch> epochs;
 
 	public SignificantEvent() {
 	}
 
-	public int getIdSignificantEvent() {
-		return this.idSignificantEvent;
+	public SignificantEvent(Date eventDate, String eventName, String text1Event, String text2Event,
+			String text3Event) {
+		this.eventDate = eventDate;
+		this.eventName = eventName;
+		this.text1Event = text1Event;
+		this.text2Event = text2Event;
+		this.text3Event = text3Event;
 	}
 
-	public void setIdSignificantEvent(int idSignificantEvent) {
-		this.idSignificantEvent = idSignificantEvent;
+	public int getid() {
+		return this.id;
+	}
+
+	public void setid(int id) {
+		this.id = id;
 	}
 
 	public Date getEventDate() {

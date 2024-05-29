@@ -1,18 +1,19 @@
 package Backend.model;
 
-import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
-@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
-public class User implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private String emailUser;
+public class User {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int idUser;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String emailUser;
 
     private String passwordUser;
 
@@ -22,7 +23,23 @@ public class User implements Serializable {
 
     private String usernameUser;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<Request> requests;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<Route> routes;
+
     public User() {
+    }
+
+    public User(String emailUser, String passwordUser, String phoneUser, String roleUser, String usernameUser) {
+        this.emailUser = emailUser;
+        this.passwordUser = passwordUser;
+        this.phoneUser = phoneUser;
+        this.roleUser = roleUser;
+        this.usernameUser = usernameUser;
     }
 
     public String getEmailUser() {
@@ -33,12 +50,12 @@ public class User implements Serializable {
         this.emailUser = emailUser;
     }
 
-    public int getIdUser() {
-        return this.idUser;
+    public int getid() {
+        return this.id;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setid(int id) {
+        this.id = id;
     }
 
     public String getPasswordUser() {
@@ -71,6 +88,22 @@ public class User implements Serializable {
 
     public void setUsernameUser(String usernameUser) {
         this.usernameUser = usernameUser;
+    }
+
+    public List<Request> getRequests() {
+        return this.requests;
+    }
+
+    public void setRequests(List<Request> requests) {
+        this.requests = requests;
+    }
+
+    public List<Route> getRoutes() {
+        return this.routes;
+    }
+
+    public void setRoutes(List<Route> routes) {
+        this.routes = routes;
     }
 
 }

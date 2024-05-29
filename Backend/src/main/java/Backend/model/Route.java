@@ -1,15 +1,15 @@
 package Backend.model;
 
-import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
-@NamedQuery(name="Route.findAll", query="SELECT r FROM Route r")
-public class Route implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Route {
 
-	@EmbeddedId
-	private RoutePK id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	private String routeName;
 
@@ -19,14 +19,27 @@ public class Route implements Serializable {
 
 	private byte routeVisibility;
 
+	@ManyToOne
+	private User user;
+
+	@ManyToMany(mappedBy = "routes")
+	private List<ArtPiece> artPieces;
+
 	public Route() {
 	}
 
-	public RoutePK getId() {
+	public Route(String routeName, String routeDescription, int routeDuration, byte routeVisibility) {
+		this.routeName = routeName;
+		this.routeDescription = routeDescription;
+		this.routeDuration = routeDuration;
+		this.routeVisibility = routeVisibility;
+	}
+
+	public int getId() {
 		return this.id;
 	}
 
-	public void setId(RoutePK id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -60,6 +73,14 @@ public class Route implements Serializable {
 
 	public void setRouteVisibility(byte routeVisibility) {
 		this.routeVisibility = routeVisibility;
+	}
+
+	public User getUser() {
+		return this.user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }
