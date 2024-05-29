@@ -2,6 +2,7 @@ package Backend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import Backend.model.User;
 import Backend.repositories.UserRepository;
@@ -14,8 +15,12 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public Boolean registerUser(User user) {
         if (userRepository.findByEmail(user.getEmailUser()) == null) {
+            user.setPasswordUser(passwordEncoder.encode(user.getPasswordUser()));
             userRepository.save(user);
             return true;
         }
