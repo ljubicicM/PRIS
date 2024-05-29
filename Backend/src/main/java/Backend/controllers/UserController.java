@@ -1,11 +1,11 @@
-package backend.controllers;
+package Backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import backend.model.User;
-import backend.services.UserService;
+import Backend.model.User;
+import Backend.services.UserService;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +21,6 @@ public class UserController {
 
     @PostMapping("/register")
     public void registerUser(@RequestBody User user) {
-        System.out.println(user);
         userService.registerUser(user);
     }
 

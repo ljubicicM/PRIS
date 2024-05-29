@@ -25,11 +25,11 @@ export const RegisterPage = () => {
 
     const handleRegister = () => {
         axios.post('http://localhost:8082/user/register', {
-            username: username as string,
-            password: password as string,
-            email: email as string,
-            phone: phoneNumber as string,
-            role: radioValue as string
+            usernameUser: username as string,
+            passwordUser: password as string,
+            emailUser: email as string,
+            phoneUser: phoneNumber as string,
+            roleUser: radioValue as string
         }).then((response) => {
             if (response.data) {
                 navigate('/login');

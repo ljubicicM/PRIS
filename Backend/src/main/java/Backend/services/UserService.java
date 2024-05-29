@@ -1,10 +1,10 @@
-package backend.services;
+package Backend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import backend.model.User;
-import backend.repositories.UserRepository;
+import Backend.model.User;
+import Backend.repositories.UserRepository;
 
 @Service
 public class UserService {
@@ -13,7 +13,7 @@ public class UserService {
     private UserRepository userRepository;
 
     public Boolean registerUser(User user) {
-        if (userRepository.findByUsername(user.getUsername()) == null) {
+        if (userRepository.findByEmail(user.getEmailUser()) == null) {
             userRepository.save(user);
             return true;
         }
