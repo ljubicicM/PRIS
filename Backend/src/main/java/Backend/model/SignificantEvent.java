@@ -2,7 +2,6 @@ package Backend.model;
 
 import jakarta.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class SignificantEvent {
@@ -22,14 +21,13 @@ public class SignificantEvent {
 
 	private String text3Event;
 
-	@OneToMany(mappedBy = "significantEvent")
-	private List<Epoch> epochs;
+	@ManyToOne
+	private Epoch epoch;
 
 	public SignificantEvent() {
 	}
 
-	public SignificantEvent(Date eventDate, String eventName, String text1Event, String text2Event,
-			String text3Event) {
+	public SignificantEvent(Date eventDate, String eventName, String text1Event, String text2Event, String text3Event) {
 		this.eventDate = eventDate;
 		this.eventName = eventName;
 		this.text1Event = text1Event;
@@ -85,26 +83,12 @@ public class SignificantEvent {
 		this.text3Event = text3Event;
 	}
 
-	public List<Epoch> getEpochs() {
-		return this.epochs;
+	public Epoch getEpoch() {
+		return this.epoch;
 	}
 
-	public void setEpochs(List<Epoch> epochs) {
-		this.epochs = epochs;
-	}
-
-	public Epoch addEpoch(Epoch epoch) {
-		getEpochs().add(epoch);
-		epoch.setSignificantEvent(this);
-
-		return epoch;
-	}
-
-	public Epoch removeEpoch(Epoch epoch) {
-		getEpochs().remove(epoch);
-		epoch.setSignificantEvent(null);
-
-		return epoch;
+	public void setEpoch(Epoch epoch) {
+		this.epoch = epoch;
 	}
 
 }

@@ -21,9 +21,8 @@ public class Epoch {
 
 	private String text3Epoch;
 
-	@ManyToOne
-	@JoinColumn(name = "significant_event_id")
-	private SignificantEvent significantEvent;
+	@OneToMany(mappedBy = "epoch")
+	private List<SignificantEvent> significantEvents;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "epoch")
@@ -32,20 +31,18 @@ public class Epoch {
 	public Epoch() {
 	}
 
-	public Epoch(String epochName, String text1Epoch, String text2Epoch, String text3Epoch,
-			SignificantEvent significantEvent) {
+	public Epoch(String epochName, String text1Epoch, String text2Epoch, String text3Epoch) {
 		this.epochName = epochName;
 		this.text1Epoch = text1Epoch;
 		this.text2Epoch = text2Epoch;
 		this.text3Epoch = text3Epoch;
-		this.significantEvent = significantEvent;
 	}
 
-	public int getId() {
+	public int getid() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setid(int id) {
 		this.id = id;
 	}
 
@@ -81,12 +78,12 @@ public class Epoch {
 		this.text3Epoch = text3Epoch;
 	}
 
-	public SignificantEvent getSignificantEvent() {
-		return this.significantEvent;
+	public List<SignificantEvent> getSignificantEvents() {
+		return this.significantEvents;
 	}
 
-	public void setSignificantEvent(SignificantEvent significantEvent) {
-		this.significantEvent = significantEvent;
+	public void setSignificantEvents(List<SignificantEvent> significantEvents) {
+		this.significantEvents = significantEvents;
 	}
 
 	public List<ArtPiece> getArtPieces() {

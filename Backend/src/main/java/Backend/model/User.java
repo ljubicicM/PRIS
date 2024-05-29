@@ -13,6 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(unique = true)
     private String emailUser;
 
     private String passwordUser;
@@ -38,6 +39,13 @@ public class User {
         this.emailUser = emailUser;
         this.passwordUser = passwordUser;
         this.phoneUser = phoneUser;
+        this.roleUser = roleUser;
+        this.usernameUser = usernameUser;
+    }
+
+    public User(String emailUser, String passwordUser, String roleUser, String usernameUser) {
+        this.emailUser = emailUser;
+        this.passwordUser = passwordUser;
         this.roleUser = roleUser;
         this.usernameUser = usernameUser;
     }

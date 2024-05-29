@@ -10,6 +10,7 @@ import jakarta.persistence.*;
 public class Author {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	private String nameAuthor;

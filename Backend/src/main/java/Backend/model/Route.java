@@ -17,7 +17,7 @@ public class Route {
 
 	private int routeDuration;
 
-	private byte routeVisibility;
+	private boolean routeVisibility;
 
 	@ManyToOne
 	private User user;
@@ -28,7 +28,7 @@ public class Route {
 	public Route() {
 	}
 
-	public Route(String routeName, String routeDescription, int routeDuration, byte routeVisibility) {
+	public Route(String routeName, String routeDescription, int routeDuration, boolean routeVisibility) {
 		this.routeName = routeName;
 		this.routeDescription = routeDescription;
 		this.routeDuration = routeDuration;
@@ -67,11 +67,11 @@ public class Route {
 		this.routeDuration = routeDuration;
 	}
 
-	public byte getRouteVisibility() {
+	public boolean getRouteVisibility() {
 		return this.routeVisibility;
 	}
 
-	public void setRouteVisibility(byte routeVisibility) {
+	public void setRouteVisibility(boolean routeVisibility) {
 		this.routeVisibility = routeVisibility;
 	}
 
