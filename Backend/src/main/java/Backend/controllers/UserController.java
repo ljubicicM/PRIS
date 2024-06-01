@@ -1,15 +1,10 @@
 package Backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import Backend.model.User;
 import Backend.services.UserService;
-
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/user")
@@ -20,8 +15,14 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public void registerUser(@RequestBody User user) {
-        userService.registerUser(user);
+    public boolean registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
+    }
+
+    @GetMapping("/login")
+    public User loginUser(@RequestParam(value = "email") String email,
+            @RequestParam(value = "password") String password) {
+        return userService.loginUser(email, password);
     }
 
 }
