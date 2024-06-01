@@ -18,16 +18,15 @@ export const LoginPage = () => {
         return (password.length > 0)
     }
     const handleLogin = () => {
-        axios.post('http://localhost:8082/user/login', {
-            passwordUser: password as string,
-            emailUser: email as string,
-        }).then((response) => {
-            if (response.data) {
-                navigate('/login');
-            }
-        }).catch((error) => {
-            console.log(error)
-        })
+        axios.get('http://localhost:8082/user/login?' +
+            'email=' + email +
+            '&password=' + password).then((response) => {
+                if (response.data !== null) {
+                    navigate('/register');
+                }
+            }).catch((error) => {
+                console.log(error)
+            })
     }
 
     return (

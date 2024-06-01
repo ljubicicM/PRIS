@@ -15,13 +15,14 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public void registerUser(@RequestBody User user) {
-        userService.registerUser(user);
+    public boolean registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
     }
 
     @GetMapping("/login")
-    public void loginUser(@RequestBody String passwordUser, String emailUser) {
-        userService.loginUser(emailUser, passwordUser);
+    public User loginUser(@RequestParam(value = "email") String email,
+            @RequestParam(value = "password") String password) {
+        return userService.loginUser(email, password);
     }
 
 }

@@ -27,15 +27,16 @@ public class UserService {
         return false;
     }
 
-    public Boolean loginUser(String userEmail, String passwordUser){
-        if(userRepository.findByEmail(userEmail) == null)
-            return false;
+    public User loginUser(String userEmail, String passwordUser) {
+        if (userRepository.findByEmail(userEmail) == null) {
+            return null;
+        }
 
         User user = userRepository.findByEmail(userEmail);
 
-        if(Objects.equals(user.getPasswordUser(), passwordUser))
-            return false;
+        if (Objects.equals(user.getPasswordUser(), passwordUser))
+            return user;
 
-        return true;
+        return null;
     }
 }
