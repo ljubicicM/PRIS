@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import './styles/loginRegisterPage.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { Context } from '../context';
 
 export const LoginPage = () => {
+    const { setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -14,6 +19,36 @@ export const LoginPage = () => {
     const checkPassword = () => {
         return (password.length > 0)
     }
+    const handleLogin = () => {
+        axios.get('http://localhost:8082/user/login?' +
+            'email=' + email +
+            '&password=' + password).then((response) => {
+                if (response.data !== null) {
+                    switch (response.data.userType) {
+                        case 'Turista':
+                            setUserType('tourist');
+                            setUserId(response.data.id);
+                            break;
+                        case 'Vodič':
+                            setUserType('guide');
+                            setUserId(response.data.id);
+                            break;
+                        case 'Admin':
+                            setUserType('admin');
+                            setUserId(response.data.id);
+                            break;
+                        default:
+                            setUserType('');
+                            setUserId('');
+                            break;
+                    }
+                    setIsNavBarVisible(false);
+                    navigate('/register');
+                }
+            }).catch((error) => {
+                console.log(error)
+            })
+    }
 
     return (
         <div className='login-container-outer'>
@@ -21,7 +56,7 @@ export const LoginPage = () => {
                 <h1>Log in</h1>
                 <Textfield value={email} setValue={setEmail} size='medium' placeholder="email" headerText="Email" />
                 <PasswordField value={password} setValue={setPassword} placeholder="************" header="Password" />
-                <Button isEnabeld={checkPassword() && checkEmail()} label="Log in" onClick={() => {alert('Logged in')}} size='large' />
+                <Button isEnabeld={checkPassword() && checkEmail()} label="Log in" onClick={() => handleLogin()} size='large' />
             </div>
         </div>
     );

@@ -10,9 +10,14 @@ import { NavBar } from './components/navBarComponent/NavBar';
 function App() {
   const [userType, setUserType] = useState("admin");
   const [userId, setUserId] = useState("");
+  const [isNavBarVisible, setIsNavBarVisible] = useState(true);
   return (
     <div className="App">
-      <Context.Provider value={[userType, setUserType, userId, setUserId]}>
+      <Context.Provider value={{
+        userType: userType, setUserType: setUserType,
+        userId: userId, setUserId: setUserId,
+        isNavBarVisible: isNavBarVisible, setIsNavBarVisible: setIsNavBarVisible
+      }}>
         <Router>
           <NavBar elements={[]} />
           <Routes>

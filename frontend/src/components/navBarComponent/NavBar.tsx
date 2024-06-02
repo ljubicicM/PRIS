@@ -14,25 +14,33 @@ declare interface NavBarElement {
 }
 
 export const NavBar = ({ elements = [] }: NavBarProps) => {
-    const [userType] = useContext(Context) as any;
-    elements = (() => {
-        switch (userType) {
-            case "":
-                return [{ label: "Register", url: "/register" }, { label: "Login", url: "/login" }];
-            case "tourist":
-                return [{ label: "Profile", url: "/profile" }, { label: "Logout", url: "/logout" }];
-            case "guide":
-                return [{ label: "Profile", url: "/profile" }, { label: "Logout", url: "/logout" }];
-            case "admin":
-                return [{ label: "Admin", url: "/admin" }, { label: "Logout", url: "/logout" }];
-            default:
-                return [];
-        }
-    })();
-    console.log(elements);
+    const { userType, isNavBarVisible, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
+    if (!isNavBarVisible) { return (<div></div>); }
+    else {
+        elements = (() => {
+            switch (userType) {
+                case "":
+                    return [{ label: "Register", url: "/register" }, { label: "Login", url: "/login" }];
+                case "tourist":
+                    return [{ label: "Profile", url: "/profile" }, { label: "Logout", url: "/logout" }];
+                case "guide":
+                    return [{ label: "Profile", url: "/profile" }, { label: "Logout", url: "/logout" }];
+                case "admin":
+                    return [{ label: "Admin", url: "/admin" }, { label: "Logout", url: "/logout" }];
+                default:
+                    return [];
+            }
+        })();
+    }
     const handleClick = (url: string) => {
-        navigate(url);
+        if (url === '/login' || url === '/register') {
+            setIsNavBarVisible(false);
+            navigate(url);
+        } else {
+            setIsNavBarVisible(true);
+            navigate(url);
+        }
     };
     const children = elements.map((element, index) => {
         return (
