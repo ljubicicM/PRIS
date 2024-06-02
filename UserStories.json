@@ -1,83 +1,55 @@
 {
 	"story_1": {
-		"index": "1",
-		"story_pts": "3",
-		"date_created": "13-04-2024",
-		"part_of_sprint": "1",
-		"status": "DOING",
-		"date_started": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neregistrovani korisnik može da otvori nalog",
+		"story": "Administrator odobrava mogućnost uređivanja korisnicima (vodičima)",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try it with a new username",
+				"test": "Try it with an empty",
 				"status": "Fails"
 			},
 			{
-				"test": "Try it with an existing username",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with an empty input",
-				"status": "Fails"
-			},
-			{
-				"test": "Try submitting registration with correctly confirmed password",
-				"status": "Fails"
-			},
-			{
-				"test": "Try submitting registration with different confirmation password",
+				"test": "Try it with ..",
 				"status": "Fails"
 			}
 		]
 	},
 	"story_2": {
-		"index": "2",
-		"story_pts": "3",
-		"date_created": "13-04-2024",
-		"part_of_sprint": "1",
-		"status": "DOING",
-		"date_started": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neulogovani korisnik može da se uloguje",
+		"story": "Pisac sadržaja može da traži da uredi opis znamenitosti",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try logging in with a nonexistent username",
+				"test": "Try it with an empty",
 				"status": "Fails"
 			},
 			{
-				"test": "Try logging in with wrong password",
-				"status": "Fails"
-			},
-			{
-				"test": "Try logging in with username and password pair that exist in database",
-				"status": "Fails"
-			},
-			{
-				"test": "Try logging in with a tourist account",
-				"status": "Fails"
-			},
-			{
-				"test": "Try logging in with a guide writter account",
-				"status": "Fails"
-			},
-			{
-				"test": "Try logging in with an administrator account",
+				"test": "Try it with ..",
 				"status": "Fails"
 			}
 		]
 	},
 	"story_3": {
-		"index": "12",
-		"story_pts": "8",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neregistrovani korisnik može da pretražuje znamenitosti, dela i umetnike koji ga zanimaju",
+		"story": "Pisac sadržaja može da piše tekst o autoru",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -91,14 +63,14 @@
 		]
 	},
 	"story_4": {
-		"index": "14",
-		"story_pts": "8",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neregistrovani korisnik može da bira kriterijume za generisanje rute i vodiča uz nju",
+		"story": "Pisac sadržaja može da piše tekst o epohi",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -112,14 +84,14 @@
 		]
 	},
 	"story_5": {
-		"index": "21",
-		"story_pts": "1",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neregistrovani korisnik može da vidi postojeće rute",
+		"story": "Pisac sadržaja može da piše tekst o umetničkom pravcu",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -133,14 +105,14 @@
 		]
 	},
 	"story_6": {
-		"index": "17",
-		"story_pts": "21",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Neregistrovani korisnik može da sortira putanju (po 3 kriterijuma)",
+		"story": "Pisac sadržaja može da piše tekst o značajnim događajima",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -154,14 +126,14 @@
 		]
 	},
 	"story_7": {
-		"index": "13",
-		"story_pts": "8",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da pretrazuje znamenitosti, dela i umetnike koji ga zanimaju",
+		"story": "Pisac sadržaja može da doda fotografije",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -175,14 +147,14 @@
 		]
 	},
 	"story_8": {
-		"index": "15",
-		"story_pts": "8",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da bira kriterijume za generisanje rute i vodiča uz nju",
+		"story": "Neregistrovani posetilac može da otvori nalog",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -196,14 +168,14 @@
 		]
 	},
 	"story_9": {
-		"index": "18",
-		"story_pts": "3",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da sačuva ture koje je kreirao i da ih menja",
+		"story": "Neregistrovani posetilac može da se uloguje",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -217,14 +189,14 @@
 		]
 	},
 	"story_10": {
-		"index": "19",
-		"story_pts": "0.5",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da učini svoju turu globalno vidljivom",
+		"story": "Neregistrovani posetilac može da gleda slike u galeriji",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -238,14 +210,14 @@
 		]
 	},
 	"story_11": {
-		"index": "20",
-		"story_pts": "1",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da vidi postojeće rute",
+		"story": "Neregistrovani posetilac može da pretraži umetničke predmete izborom epohe, umetnika ili godine nastanka",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -259,14 +231,14 @@
 		]
 	},
 	"story_12": {
-		"index": "16",
-		"story_pts": "21",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da sortira putanju (po 3 kriterijuma)",
+		"story": "Neregistrovani posetilac može da izabere kontekst za svaki odabran predmet",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -280,14 +252,14 @@
 		]
 	},
 	"story_13": {
-		"index": "22",
-		"story_pts": "13",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da napravi izmene u redosledu putanje",
+		"story": "Neregistrovani posetilac može da izabere nivo opštosti koji želi",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -301,39 +273,35 @@
 		]
 	},
 	"story_14": {
-		"index": "4",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
-		"part_of_sprint": "1",
-		"status": "TODO",
-		"date_started": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
 		"date_completed": "None",
-		"story": "Vodič može da traži da doda znamenitost",
+		"story": "Neregistrovani posetilac može da izabere način sortiranja (hronološki, sličnost pravca, što manje hoda)",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try it with an empty input",
+				"test": "Try it with an empty",
 				"status": "Fails"
 			},
 			{
-				"test": "Try it with a new landmark",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with an existing landmark",
+				"test": "Try it with ..",
 				"status": "Fails"
 			}
 		]
 	},
 	"story_15": {
-		"index": "6",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Vodič može da traži da doda umetnika",
+		"story": "Neregistrovani posetilac može da napravi izmene u redosledu znamenitosti koje posećuje",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -347,14 +315,14 @@
 		]
 	},
 	"story_16": {
-		"index": "8",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Vodič može da traži da doda delo",
+		"story": "Turista može da gleda slike u galeriji",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -368,14 +336,14 @@
 		]
 	},
 	"story_17": {
-		"index": "10",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Vodič može da traži da uredi opis",
+		"story": "Turista može da pretraži umetničke predmete izborom epohe, umetnika ili godine nastanka",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -389,39 +357,35 @@
 		]
 	},
 	"story_18": {
-		"index": "3",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
-		"part_of_sprint": "1",
-		"status": "TODO",
-		"date_started": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator može da doda znamenitost",
+		"story": "Turista može da izabere kontekst za svaki odabran predmet",
 		"comment": "",
 		"acceptance criteria": [
 			{
-				"test": "Try adding an empty input",
+				"test": "Try it with an empty",
 				"status": "Fails"
 			},
 			{
-				"test": "Try adding an existing landmark",
-				"status": "Fails"
-			},
-			{
-				"test": "Try adding a new landmark",
+				"test": "Try it with ..",
 				"status": "Fails"
 			}
 		]
 	},
 	"story_19": {
-		"index": "5",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator može da doda umetnika",
+		"story": "Turista može da izabere nivo opštosti koji želi",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -435,14 +399,14 @@
 		]
 	},
 	"story_20": {
-		"index": "7",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator može da doda delo",
+		"story": "Turista može da izabere način sortiranja (hronološki, sličnost pravca, što manje hoda)",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -456,14 +420,14 @@
 		]
 	},
 	"story_21": {
-		"index": "9",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator može da uredi opis",
+		"story": "Turista može da napravi izmene u redosledu znamenitosti koje posećuje",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -477,14 +441,14 @@
 		]
 	},
 	"story_22": {
-		"index": "11",
-		"story_pts": "5",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator ima pregled svih zahteva koje može da prihvati ili odbije",
+		"story": "Turista može da sačuva ture koje je kreirao",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -498,14 +462,14 @@
 		]
 	},
 	"story_23": {
-		"index": "23",
-		"story_pts": "13",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Platforma spaja sadržaj u jedan dokument koji može da se preuzme",
+		"story": "Turista može da menja sačuvane ture",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -519,14 +483,14 @@
 		]
 	},
 	"story_24": {
-		"index": "25",
-		"story_pts": "2",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Turista može da traži da doda znamenitost",
+		"story": "Turista može da svoju turu učini globalno vidljivom u katalogu",
 		"comment": "",
 		"acceptance criteria": [
 			{
@@ -540,14 +504,35 @@
 		]
 	},
 	"story_25": {
-		"index": "24",
-		"story_pts": "1",
-		"date_created": "13-04-2024",
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Administrator može da vidi sve stranice",
+		"story": "Platforma prati vreme trajanja ture i pri svakom izboru ga uvećava (uzima u obzir i vreme hoda)",
+		"comment": "",
+		"acceptance criteria": [
+			{
+				"test": "Try it with an empty",
+				"status": "Fails"
+			},
+			{
+				"test": "Try it with ..",
+				"status": "Fails"
+			}
+		]
+	},
+	"story_26": {
+		"index": "",
+		"story_pts": "",
+		"date_created": "26-05-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Platforma vrši unifikaciju sadržaja u 1 dokument (pdf fajl)",
 		"comment": "",
 		"acceptance criteria": [
 			{
