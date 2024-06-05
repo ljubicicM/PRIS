@@ -4,18 +4,10 @@ import { useContext } from 'react';
 import { Context } from '../../context';
 
 
-declare interface NavBarProps {
-    elements?: Array<NavBarElement>;
-}
-
-declare interface NavBarElement {
-    label: string;
-    url: string;
-}
-
-export const NavBar = ({ elements = [] }: NavBarProps) => {
+export const NavBar = () => {
     const { userType, isNavBarVisible, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
+    var elements = [];
     if (!isNavBarVisible) { return (<div></div>); }
     else {
         elements = (() => {

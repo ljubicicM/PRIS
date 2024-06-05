@@ -1,0 +1,16 @@
+.route-create-container {
+    display: flex;
+    align-items: center;
+    height: 850px;
+    width: 1750px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.route-create-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

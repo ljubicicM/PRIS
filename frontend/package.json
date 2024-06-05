@@ -47,6 +47,5 @@
     "@babel/plugin-transform-private-property-in-object": "^7.24.5",
     "react-script": "^2.0.5",
     "react-scripts": "^5.0.1"
-  },
-  "proxy": "http://localhost:8082/"
+  }
 }
