@@ -9,16 +9,16 @@ declare type Option = {
 declare interface DropdownProps {
     headerText: string;
     value: any;
-    setValue: any;
+    handleChange: any;
     options: Array<Option>;
 }
 
 
-export const Dropdown = ({ headerText, value, setValue, options }: DropdownProps) => {
+export const Dropdown = ({ headerText, value, handleChange, options }: DropdownProps) => {
     return (
         <div className='dropdown-container'>
             <label className='dropdown-header '>{headerText}</label>
-            <select className='dropdown' value={value} onChange={(e) => setValue(e.target.value)}>
+            <select className='dropdown' value={value} onChange={(e) => handleChange(e.target.value)}>
                 {options.map((option) => {
                     return <option className='dropdown-option' key={option.id} value={option.id}>{option.value}</option>
                 })}
