@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
 import { Textfield } from '../components/textFieldComponent/textfield';
@@ -6,8 +6,10 @@ import { RadioButtons } from '../components/radioButtonComponent/RadioButtons';
 import './styles/loginRegisterPage.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Context } from '../context';
 
 export const RegisterPage = () => {
+    const { setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
@@ -32,6 +34,7 @@ export const RegisterPage = () => {
             roleUser: radioValue as string
         }).then((response) => {
             if (response.data) {
+                setIsNavBarVisible(false);
                 navigate('/login');
             }
         }).catch((error) => {

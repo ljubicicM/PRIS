@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import './styles/loginRegisterPage.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Context } from '../context';
 
 export const LoginPage = () => {
+    const { setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -22,6 +24,25 @@ export const LoginPage = () => {
             'email=' + email +
             '&password=' + password).then((response) => {
                 if (response.data !== null) {
+                    switch (response.data.userType) {
+                        case 'Turista':
+                            setUserType('tourist');
+                            setUserId(response.data.id);
+                            break;
+                        case 'Vodič':
+                            setUserType('guide');
+                            setUserId(response.data.id);
+                            break;
+                        case 'Admin':
+                            setUserType('admin');
+                            setUserId(response.data.id);
+                            break;
+                        default:
+                            setUserType('');
+                            setUserId('');
+                            break;
+                    }
+                    setIsNavBarVisible(false);
                     navigate('/register');
                 }
             }).catch((error) => {
