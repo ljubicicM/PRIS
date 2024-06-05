@@ -19,6 +19,7 @@ public class ArtisticMovement {
 
 	private String text2Movement;
 
+	@Column(length = 5000)
 	private String text3Movement;
 
 	@JsonIgnore

@@ -19,6 +19,7 @@ public class Epoch {
 
 	private String text2Epoch;
 
+	@Column(length = 5000)
 	private String text3Epoch;
 
 	@OneToMany(mappedBy = "epoch")
