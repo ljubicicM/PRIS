@@ -1,548 +1,410 @@
 {
 	"story_1": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "3",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
-		"status": "BACKLOG",
+		"status": "DONE",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Administrator odobrava mogućnost uređivanja korisnicima (vodičima)",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_2": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"status": "DONE",
+		"date_started": "21-05-2024",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da traži da uredi opis znamenitosti",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_3": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da piše tekst o autoru",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_4": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da piše tekst o epohi",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_5": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da piše tekst o umetničkom pravcu",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_6": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da piše tekst o značajnim događajima",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_7": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "13",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Pisac sadržaja može da doda fotografije",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_8": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
-		"date_completed": "None",
+		"story_pts": "2",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "1",
+		"status": "DONE",
+		"date_started": "21-05-2024",
+		"date_completed": "28-05-2024",
 		"story": "Neregistrovani posetilac može da otvori nalog",
-		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"comment": "Must have",
+		"acceptance criteria": []
 	},
 	"story_9": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
-		"date_completed": "None",
+		"story_pts": "2",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "1",
+		"status": "DONE",
+		"date_started": "21-05-2024",
+		"date_completed": "28-05-2024",
 		"story": "Neregistrovani posetilac može da se uloguje",
-		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"comment": "Must have",
+		"acceptance criteria": []
 	},
 	"story_10": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "2",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da gleda slike u galeriji",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_11": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "3",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "28-05-2024",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da pretraži umetničke predmete izborom epohe, umetnika ili godine nastanka",
-		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"comment": "Must have",
+		"acceptance criteria": []
 	},
 	"story_12": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "13",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da izabere kontekst za svaki odabran predmet",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_13": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da izabere nivo opštosti koji želi",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_14": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "21",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da izabere način sortiranja (hronološki, sličnost pravca, što manje hoda)",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_15": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "21",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Neregistrovani posetilac može da napravi izmene u redosledu znamenitosti koje posećuje",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_16": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "5",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Turista može da gleda slike u galeriji",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_17": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "3",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "28-05-2024",
 		"date_completed": "None",
 		"story": "Turista može da pretraži umetničke predmete izborom epohe, umetnika ili godine nastanka",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_18": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "13",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Turista može da izabere kontekst za svaki odabran predmet",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_19": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Turista može da izabere nivo opštosti koji želi",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_20": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "21",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05.06.2024",
 		"date_completed": "None",
 		"story": "Turista može da izabere način sortiranja (hronološki, sličnost pravca, što manje hoda)",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_21": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "21",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Turista može da napravi izmene u redosledu znamenitosti koje posećuje",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_22": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "1",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Turista može da sačuva ture koje je kreirao",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_23": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "5",
+		"date_created": "20-05-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
 		"story": "Turista može da menja sačuvane ture",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_24": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "0.5",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
 		"date_completed": "None",
 		"story": "Turista može da svoju turu učini globalno vidljivom u katalogu",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_25": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
-		"part_of_sprint": "None",
-		"status": "BACKLOG",
-		"date_started": "None",
+		"story_pts": "2",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "28-02-2024",
 		"date_completed": "None",
 		"story": "Platforma prati vreme trajanja ture i pri svakom izboru ga uvećava (uzima u obzir i vreme hoda)",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
 	},
 	"story_26": {
 		"index": "",
-		"story_pts": "",
-		"date_created": "26-05-2024",
+		"story_pts": "8",
+		"date_created": "20-05-2024",
+		"part_of_sprint": "2",
+		"status": "TODO",
+		"date_started": "05-06-2024",
+		"date_completed": "None",
+		"story": "Platforma vrši unifikaciju sadržaja u 1 dokument (pdf fajl)",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_27": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
 		"part_of_sprint": "None",
 		"status": "BACKLOG",
 		"date_started": "None",
 		"date_completed": "None",
-		"story": "Platforma vrši unifikaciju sadržaja u 1 dokument (pdf fajl)",
+		"story": "Administrator može da doda predmet",
 		"comment": "",
-		"acceptance criteria": [
-			{
-				"test": "Try it with an empty",
-				"status": "Fails"
-			},
-			{
-				"test": "Try it with ..",
-				"status": "Fails"
-			}
-		]
+		"acceptance criteria": []
+	},
+	"story_28": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda autora",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_29": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda umetnički pravac",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_30": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Administrator može da doda epohu",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_31": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da doda predmet",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_32": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da doda autora",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_33": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da doda umetnički pravac",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_34": {
+		"index": "",
+		"story_pts": "8",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Vodič može da doda epohu",
+		"comment": "",
+		"acceptance criteria": []
 	}
 }
