@@ -6,6 +6,7 @@ import { CRSearchByPage } from './routes/CRSearchByPage';
 import { Context } from './context';
 import { useState } from 'react';
 import { NavBar } from './components/navBarComponent/NavBar';
+import { HomePage } from './routes/HomePage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/cr/searchby" element={<CRSearchByPage />} />
