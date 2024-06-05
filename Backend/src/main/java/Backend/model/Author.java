@@ -21,6 +21,7 @@ public class Author {
 
 	private String text2Author;
 
+	@Column(length = 5000)
 	private String text3Author;
 
 	@JsonIgnore

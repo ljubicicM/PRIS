@@ -7,8 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import Backend.model.User;
 import Backend.repositories.UserRepository;
 
-import java.util.Objects;
-
 @Service
 public class UserService {
 
@@ -34,8 +32,9 @@ public class UserService {
 
         User user = userRepository.findByEmail(userEmail);
 
-        if (Objects.equals(user.getPasswordUser(), passwordUser))
+        if (passwordEncoder.matches(passwordUser, user.getPasswordUser())) {
             return user;
+        }
 
         return null;
     }
