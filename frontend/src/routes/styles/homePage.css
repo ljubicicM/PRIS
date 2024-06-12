@@ -1,0 +1,46 @@
+.welcome-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 850px;
+    width: 85vw;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: 30px 0px;
+}
+
+.welcome-container-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 50px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+.welcome-text {
+    font-size: 25px;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.welcome-title {
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+.welcome-image {
+    height: 50vh;
+    width: 50vw;
+    border-radius: 5px;
+}
