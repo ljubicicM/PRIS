@@ -19,6 +19,9 @@ export const CRSearchByPage = () => {
     const [dropdownValueEpoch, setDropdownValueEpoch] = useState(1);
     const [dropdownValueAuthor, setDropdownValueAuthor] = useState(1);
 
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+
     const loadYearsCreated = async () => {
         const response = await axios.get('http://localhost:8082/artPiece/yearsCreated')
         if (response.data) {
@@ -115,9 +118,18 @@ export const CRSearchByPage = () => {
         }
     }
 
+    const calculateTime = () => {
+        let time = 0;
+        selectedArtPieces.forEach((artPiece: any) => {
+            console.log(artPiece.retentionTime);
+            time += Number(artPiece.retentionTime as number);
+        });
+        setHours(Math.floor(time / 60));
+        setMinutes(time % 60);
+    }
 
     useEffect(() => {
-        console.log(selectedArtPieces);
+        calculateTime();
     }, [selectedArtPieces]);
 
     const loadContent = () => {
@@ -140,7 +152,7 @@ export const CRSearchByPage = () => {
                     <Dropdown headerText='Epoch' value={dropdownValueEpoch} handleChange={handleChangeEpoch} options={epochs} />
                     <Dropdown headerText='Author' value={dropdownValueAuthor} handleChange={handleChangeAuthor} options={authors} />
                     <div className='create-route-dropdowns-button'>
-                        <Button label='Clear' size='medium' isEnabeld={true} onClick={() => { loadAllArtPieces() }} />
+                        <Button label='Show all' size='medium' isEnabeld={true} onClick={() => { loadAllArtPieces() }} />
                     </div>
                 </div>
                 <div className='create-route-art-pieces-container'>
@@ -177,6 +189,9 @@ export const CRSearchByPage = () => {
                     </table>
                 </div>
                 <div className='create-route-search-by-footer'>
+                    <div className='create-route-search-by-time'>
+                        Approximate time to visit: {hours}h {minutes}min
+                    </div>
                     <Button label='Create Route' size='large' isEnabeld={selectedArtPieces != null} onClick={handleNavigate()} />
                 </div>
             </div>

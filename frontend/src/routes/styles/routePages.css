@@ -50,3 +50,16 @@
     color: var(--text-color);
     width: 500px !important;
 }
+
+.create-route-search-by-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    gap: 300px;
+}
+
+.create-route-search-by-time {
+    color: var(--text-color);
+    font-size: 20px;
+}
