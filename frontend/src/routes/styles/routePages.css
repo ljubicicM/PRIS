@@ -1,16 +1,65 @@
 .route-create-container {
     display: flex;
     align-items: center;
-    height: 850px;
+    height: 800px;
     width: 1750px;
     flex-direction: column;
     background-color: var(--background-color);
     margin-top: 40px;
     border-radius: 10px;
+    padding-bottom: 10px;
 }
 
 .route-create-container-outer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.create-route-dropdowns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 10px;
+    gap: 30px;
+
+}
+
+.create-route-dropdowns-button {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+
+.create-route-art-piece-image {
+    height: 200px;
+    width: 200px;
+}
+
+.create-route-art-pieces-container {
+    overflow-y: auto;
+    height: 525px;
+    padding-top: 40px;
+}
+
+.create-route-art-piece-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    width: 500px !important;
+}
+
+.create-route-search-by-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    gap: 300px;
+}
+
+.create-route-search-by-time {
+    color: var(--text-color);
+    font-size: 20px;
 }
