@@ -4,8 +4,10 @@ import { Dropdown } from '../components/dropdownComponent/dropdown';
 import axios from 'axios';
 import { Button } from '../components/buttonComponent/Button';
 import artPiecePlaceholder from '../assets/images/artPiecePlaceholder.jpg';
+import { useNavigate } from 'react-router-dom';
 
 export const CRSearchByPage = () => {
+    const navigate = useNavigate();
     const [isInitialized, setIsInitialized] = useState(false);
     const [yearsCreated, setYearsCreated] = useState([]);
     const [epochs, setEpochs] = useState([]);
@@ -94,7 +96,8 @@ export const CRSearchByPage = () => {
     const addArtPiece = (id: number) => {
         return () => {
             const artPiece = artPieces.find((artPiece: any) => artPiece.id === id);
-            if (artPiece) {
+            const allreadyAdded = selectedArtPieces.find((artPiece: any) => artPiece.id === id);
+            if (artPiece && !allreadyAdded) {
                 setSelectedArtPieces([...selectedArtPieces, artPiece]);
             }
         }
@@ -105,6 +108,13 @@ export const CRSearchByPage = () => {
             setSelectedArtPieces(selectedArtPieces.filter((artPiece: any) => artPiece.id !== id));
         }
     }
+
+    const handleNavigate = () => {
+        return () => {
+            navigate('/cr/sortby/', { state: { artPieces: selectedArtPieces } });
+        }
+    }
+
 
     useEffect(() => {
         console.log(selectedArtPieces);
@@ -165,6 +175,9 @@ export const CRSearchByPage = () => {
                                 })}
                         </tbody>
                     </table>
+                </div>
+                <div className='create-route-search-by-footer'>
+                    <Button label='Create Route' size='large' isEnabeld={selectedArtPieces != null} onClick={handleNavigate()} />
                 </div>
             </div>
         </div>

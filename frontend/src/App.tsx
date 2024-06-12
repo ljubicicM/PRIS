@@ -6,6 +6,7 @@ import { CRSearchByPage } from './routes/CRSearchByPage';
 import { Context } from './context';
 import { useState } from 'react';
 import { NavBar } from './components/navBarComponent/NavBar';
+import { CRSortByPage } from './routes/CRSortByPage';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/cr/searchby" element={<CRSearchByPage />} />
+            <Route path="/cr/sortby" element={<CRSortByPage />} />
           </Routes>
         </Router>
       </Context.Provider>
