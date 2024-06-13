@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { NavBar } from './components/navBarComponent/NavBar';
 import { HomePage } from './routes/HomePage';
 import { CRSortByPage } from './routes/CRSortByPage';
+import { CRChooseContextPage } from './routes/CRChooseContextPage';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/cr/searchby" element={<CRSearchByPage />} />
             <Route path="/cr/sortby" element={<CRSortByPage />} />
+            <Route path="/cr/choosecontext" element={<CRChooseContextPage />} />
           </Routes>
         </Router>
       </Context.Provider>
