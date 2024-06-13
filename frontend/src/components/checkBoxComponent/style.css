@@ -15,3 +15,11 @@ input.checkbox-input {
     font-size: 20px;
     color: var(--text-color);
 }
+
+.multiple-checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
