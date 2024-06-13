@@ -121,7 +121,6 @@ export const CRSearchByPage = () => {
     const calculateTime = () => {
         let time = 0;
         selectedArtPieces.forEach((artPiece: any) => {
-            console.log(artPiece.retentionTime);
             time += Number(artPiece.retentionTime as number);
         });
         setHours(Math.floor(time / 60));
