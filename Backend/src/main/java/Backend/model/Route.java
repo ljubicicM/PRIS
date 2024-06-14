@@ -83,4 +83,11 @@ public class Route {
 		this.user = user;
 	}
 
+	public List<ArtPiece> getArtPieces() {
+		return this.artPieces;
+	}
+
+	public void setArtPieces(List<ArtPiece> artPieces) {
+		this.artPieces = artPieces;
+	}
 }
