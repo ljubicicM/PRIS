@@ -1,19 +1,20 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import './styles/routePages.css';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { MultipleCheckbox } from '../components/checkBoxComponent/MultipleCheckbox';
 import { Dropdown } from '../components/dropdownComponent/dropdown';
 import { Context } from '../context';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import { Checkbox } from '../components/checkBoxComponent/CheckBox';
 import { Button } from '../components/buttonComponent/Button';
+import axios from 'axios';
 
 export const CRChooseContextPage = () => {
     const navigate = useNavigate();
     const state = useLocation();
     const [artPieces, setArtPieces] = useState(state.state.artPieces);
     const [time, setTime] = useState(state.state.time);
-    const { userType } = useContext(Context) as any;
+    const { userType, userId } = useContext(Context) as any;
     const [generality, setGenerality] = useState(1);
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
@@ -22,8 +23,24 @@ export const CRChooseContextPage = () => {
     const handlePDF = () => {
 
     }
+    const handleSaveRoute = async () => {
+        await axios.post('http://localhost:8082/route/saveRoute', {
+            userId: userId,
+            artPieces: artPieces,
+            routeName: name,
+            routeDescription: description,
+            routeDuration: time,
+            routeVisibility: isVisable,
+        })
+            .then((response) => {
+                if (response.data !== null && response.data) {
+                    alert('Route saved successfully')
+                }
+            }).catch((error) => {
+                alert('Route not saved')
+                console.log(error)
+            })
 
-    const handleSaveRoute = () => {
     }
 
     return (
@@ -56,7 +73,7 @@ export const CRChooseContextPage = () => {
                             <Checkbox val={isVisable} setValue={setIsVisable} label='Make route globaly visable' name='isVisable' />
                         </div>
                         <div className='route-create-save-button'>
-                            <Button label='Save route' size='medium' onClick={handleSaveRoute()} />
+                            <Button label='Save route' size='medium' isEnabeld={name !== "" && description !== ""} onClick={handleSaveRoute} />
                         </div>
                     </div>
                     : <></>}

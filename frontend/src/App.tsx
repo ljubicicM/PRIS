@@ -13,7 +13,7 @@ import { CRChooseContextPage } from './routes/CRChooseContextPage';
 
 function App() {
   const [userType, setUserType] = useState("admin");
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState(0);
   const [isNavBarVisible, setIsNavBarVisible] = useState(true);
   return (
     <div className="App">
