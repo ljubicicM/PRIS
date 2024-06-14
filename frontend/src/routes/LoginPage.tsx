@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from '../context';
 
 export const LoginPage = () => {
-    const { setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
+    const { userId, setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,7 +24,7 @@ export const LoginPage = () => {
             'email=' + email +
             '&password=' + password).then((response) => {
                 if (response.data !== null) {
-                    switch (response.data.userType) {
+                    switch (response.data.roleUser) {
                         case 'Turista':
                             setUserType('tourist');
                             setUserId(response.data.id);
@@ -43,7 +43,7 @@ export const LoginPage = () => {
                             break;
                     }
                     setIsNavBarVisible(false);
-                    navigate('/register');
+                    navigate('/cr/searchby');
                 }
             }).catch((error) => {
                 console.log(error)

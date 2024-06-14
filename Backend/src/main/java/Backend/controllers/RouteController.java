@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import Backend.dto.RouteDTO;
 import Backend.services.RouteService;
 
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/route")
@@ -20,7 +20,7 @@ public class RouteController {
     private RouteService routeService;
 
     @PostMapping("/saveRoute")
-    public boolean postMethodName(@RequestParam RouteDTO dto) {
+    public boolean postMethodName(@RequestBody RouteDTO dto) {
         return routeService.saveRoute(dto);
     }
 
