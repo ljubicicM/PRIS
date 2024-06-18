@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import './styles/routePages.css';
 import { Dropdown } from '../components/dropdownComponent/dropdown';
@@ -114,7 +115,7 @@ export const CRSearchByPage = () => {
 
     const handleNavigate = () => {
         return () => {
-            navigate('/cr/sortby/', { state: { artPieces: selectedArtPieces } });
+            navigate('/cr/sortby/', { state: { artPieces: selectedArtPieces, time: (hours * 60 + minutes) } });
         }
     }
 
@@ -191,7 +192,7 @@ export const CRSearchByPage = () => {
                     <div className='create-route-search-by-time'>
                         Approximate time to visit: {hours}h {minutes}min
                     </div>
-                    <Button label='Create Route' size='large' isEnabeld={selectedArtPieces != null} onClick={handleNavigate()} />
+                    <Button label='Create Route' size='large' isEnabeld={selectedArtPieces.length > 0} onClick={handleNavigate()} />
                 </div>
             </div>
         </div>

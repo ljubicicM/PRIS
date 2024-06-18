@@ -1,7 +1,7 @@
 .route-create-container {
     display: flex;
     align-items: center;
-    height: 800px;
+    height: 850px;
     width: 1750px;
     flex-direction: column;
     background-color: var(--background-color);
@@ -33,8 +33,8 @@
 }
 
 .create-route-art-piece-image {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
 }
 
 .create-route-art-pieces-container {
@@ -102,4 +102,60 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.route-create-container h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+.route-create-context {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.route-create-context-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    width: 200px;
+}
+
+.route-create-context-container {
+    overflow-y: auto;
+    height: 400px;
+    padding: 0px 20px 0px 20px;
+}
+
+.route-create-pdf-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    padding-top: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.route-create-pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.route-create-save-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
 }
