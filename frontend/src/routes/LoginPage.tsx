@@ -23,7 +23,7 @@ export const LoginPage = () => {
         axios.get('http://localhost:8082/user/login?' +
             'email=' + email +
             '&password=' + password).then((response) => {
-                if (response.data !== null) {
+                if (response.data.id != null && response.data.id != "" && response.data.id != undefined) {
                     switch (response.data.roleUser) {
                         case 'Turista':
                             setUserType('tourist');
@@ -42,8 +42,10 @@ export const LoginPage = () => {
                             setUserId('');
                             break;
                     }
-                    setIsNavBarVisible(false);
+                    setIsNavBarVisible(true);
                     navigate('/cr/searchby');
+                } else {
+                    alert('Wrong email or password');
                 }
             }).catch((error) => {
                 console.log(error)

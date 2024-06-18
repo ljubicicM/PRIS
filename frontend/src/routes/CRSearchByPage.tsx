@@ -143,6 +143,7 @@ export const CRSearchByPage = () => {
         loadContent();
         setIsInitialized(true);
     }
+
     return (
         <div className='route-create-container-outer'>
             <div className="route-create-container">

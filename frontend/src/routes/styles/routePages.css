@@ -1,7 +1,7 @@
 .route-create-container {
     display: flex;
     align-items: center;
-    height: 850px;
+    height: 800px;
     width: 1750px;
     flex-direction: column;
     background-color: var(--background-color);
@@ -131,7 +131,7 @@ h6 {
 
 .route-create-context-container {
     overflow-y: auto;
-    height: 400px;
+    height: 300px;
     padding: 0px 20px 0px 20px;
 }
 
