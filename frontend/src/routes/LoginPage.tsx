@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { useContext, useState } from 'react';
 import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
@@ -8,7 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from '../context';
 
 export const LoginPage = () => {
-    const { setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { userId, setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,8 +25,8 @@ export const LoginPage = () => {
         axios.get('http://localhost:8082/user/login?' +
             'email=' + email +
             '&password=' + password).then((response) => {
-                if (response.data !== null) {
-                    switch (response.data.userType) {
+                if (response.data.id != null && response.data.id != "" && response.data.id != undefined) {
+                    switch (response.data.roleUser) {
                         case 'Turista':
                             setUserType('tourist');
                             setUserId(response.data.id);
@@ -42,8 +44,10 @@ export const LoginPage = () => {
                             setUserId('');
                             break;
                     }
-                    setIsNavBarVisible(false);
-                    navigate('/register');
+                    setIsNavBarVisible(true);
+                    navigate('/cr/searchby');
+                } else {
+                    alert('Wrong email or password');
                 }
             }).catch((error) => {
                 console.log(error)

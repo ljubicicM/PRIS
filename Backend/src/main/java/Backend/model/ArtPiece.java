@@ -24,7 +24,7 @@ public class ArtPiece {
     private String address;
 
     @Column(length = 5000)
-    private String description;
+    public String description;
 
     private int xCoordinate;
     private int yCoordinate;

@@ -2,7 +2,6 @@ package Backend.services;
 
 import java.util.List;
 
-import Backend.dto.ArtisticMovementDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useLocation, useNavigate } from "react-router-dom";
 import arrowDown from "../assets/images/arrowDown.svg";
 import './styles/routePages.css';
@@ -9,6 +10,7 @@ export const CRSortByPage = () => {
     const navigate = useNavigate();
     const state = useLocation();
     const [artPieces, setArtPieces] = useState(state.state.artPieces);
+    const [time, setTime] = useState(state.state.time);
 
 
     const handleNavigate = () => {
@@ -19,8 +21,8 @@ export const CRSortByPage = () => {
                 temp[i].hasAuthor = false;
                 temp[i].hasEvent = false;
             }
-            console.log(temp);
-            navigate('/cr/sortby/', { state: { artPieces: temp } });
+
+            navigate('/cr/choosecontext/', { state: { artPieces: temp, time: (time + calculateTime(temp)) } });
         }
     }
 
@@ -93,6 +95,10 @@ export const CRSortByPage = () => {
             totalDistance += calcCrow(aps[i].xCoordinate, aps[i].yCoordinate, aps[i + 1].xCoordinate, aps[i + 1].yCoordinate);
         }
         return totalDistance;
+    }
+
+    const calculateTime = (aps: any) => {
+        return calculateTotalDistance(aps) / 1000 * 12;
     }
 
 

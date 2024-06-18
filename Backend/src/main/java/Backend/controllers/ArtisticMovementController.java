@@ -3,8 +3,6 @@ package Backend.controllers;
 import java.util.List;
 
 import Backend.dto.ArtisticMovementDTO;
-import Backend.dto.AuthorDTO;
-import Backend.model.Author;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
