@@ -1,4 +1,5 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useLocation } from 'react-router-dom';
 import './styles/routePages.css';
 import { useContext, useState } from 'react';
 import { MultipleCheckbox } from '../components/checkBoxComponent/MultipleCheckbox';
@@ -10,7 +11,6 @@ import { Button } from '../components/buttonComponent/Button';
 import axios from 'axios';
 
 export const CRChooseContextPage = () => {
-    const navigate = useNavigate();
     const state = useLocation();
     const [artPieces, setArtPieces] = useState(state.state.artPieces);
     const [time, setTime] = useState(state.state.time);
@@ -20,8 +20,34 @@ export const CRChooseContextPage = () => {
     const [description, setDescription] = useState('');
     const [isVisable, setIsVisable] = useState(false);
 
-    const handlePDF = () => {
+    const createRouteString = (artPieces: any) => {
+        let routeString = '';
+        artPieces.forEach((artPiece: any) => {
+            routeString += '===>' + artPiece.name;
+        });
+        return routeString;
+    }
 
+    const handlePDF = async () => {
+        console.log(String(generality))
+        await axios.post('http://localhost:8082/report/generateReport/', {
+            artPieces: artPieces,
+            routeGenerality: String(generality),
+            minutes: String(Math.floor(time) % 60),
+            hours: String(Math.floor(time / 60)),
+            routeString: createRouteString(artPieces) as string,
+        }, { responseType: 'arraybuffer' })
+            .then((response) => {
+                const pdf = new Blob([response.data], { type: 'application/pdf' });
+                const url = URL.createObjectURL(pdf);
+                const tempLink = document.createElement('a');
+                tempLink.href = url;
+                tempLink.setAttribute('download', 'route.pdf');
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                document.body.removeChild(tempLink);
+                window.URL.revokeObjectURL(url);
+            })
     }
     const handleSaveRoute = async () => {
         await axios.post('http://localhost:8082/route/saveRoute', {

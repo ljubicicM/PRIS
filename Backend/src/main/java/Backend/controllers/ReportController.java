@@ -1,17 +1,17 @@
 package Backend.controllers;
 
-import Backend.model.ArtPiece;
+import Backend.dto.ReportDTO;
 import Backend.services.ReportService;
+import jakarta.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperPrint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/report")
@@ -21,23 +21,22 @@ public class ReportController {
     @Autowired
     private ReportService reportService;
 
-    @PostMapping("/generateReport")
-    public ResponseEntity<?> generateReport(@RequestParam String routeString, @RequestBody List<ArtPiece> arrayArtPiece) throws IOException, ChangeSetPersister.NotFoundException, JRException {
-        if (arrayArtPiece == null || arrayArtPiece.isEmpty()) {
+    @PostMapping("/generateReport/")
+    public void generateReport(@RequestBody ReportDTO dto, HttpServletResponse response)
+            throws IOException, ChangeSetPersister.NotFoundException, JRException {
+        if (dto.getArtPieces() == null || dto.getArtPieces().isEmpty()) {
             throw new ChangeSetPersister.NotFoundException();
         }
 
-        byte[] report = reportService.createReport(routeString, arrayArtPiece);
+        JasperPrint report = reportService.createReport(dto);
         if (report == null) {
             throw new ChangeSetPersister.NotFoundException();
         }
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF);
-        headers.setContentDispositionFormData("attachment", "artPiecesReport.pdf");
-        return ResponseEntity.ok()
-                .headers(headers)
-                .body(report);
+        JasperExportManager.exportReportToPdfStream(report, response.getOutputStream());
     }
 
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> handleException(RuntimeException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
 }
