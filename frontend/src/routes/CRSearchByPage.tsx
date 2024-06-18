@@ -144,7 +144,6 @@ export const CRSearchByPage = () => {
         setIsInitialized(true);
     }
 
-    console.log(artPieces)
     return (
         <div className='route-create-container-outer'>
             <div className="route-create-container">

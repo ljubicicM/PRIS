@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from '../context';
 
 export const LoginPage = () => {
-    const { setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
+    const { userId, setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ export const LoginPage = () => {
         axios.get('http://localhost:8082/user/login?' +
             'email=' + email +
             '&password=' + password).then((response) => {
-                if (response.data !== null) {
+                if (response.data.id != null && response.data.id != "" && response.data.id != undefined) {
                     switch (response.data.roleUser) {
                         case 'Turista':
                             setUserType('tourist');
@@ -44,6 +44,8 @@ export const LoginPage = () => {
                     }
                     setIsNavBarVisible(true);
                     navigate('/cr/searchby');
+                } else {
+                    alert('Wrong email or password');
                 }
             }).catch((error) => {
                 console.log(error)
