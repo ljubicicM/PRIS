@@ -32,4 +32,6 @@ public class ArtPieceService {
     public List<ArtPiece> getByEpoch(Integer epochId) {
         return artPieceRepository.findByEpoch(epochId);
     }
+
+    public ArtPiece saveArtPiece(ArtPiece artPiece){ return artPieceRepository.save(artPiece);}
 }

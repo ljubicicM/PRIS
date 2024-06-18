@@ -18,4 +18,5 @@ public class EpochService {
         return epochRepository.findAll();
     }
 
+    public Epoch saveEpoch(Epoch epoch){ return epochRepository.save(epoch);}
 }
