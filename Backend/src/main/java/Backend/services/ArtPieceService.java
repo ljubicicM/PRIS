@@ -2,6 +2,7 @@ package Backend.services;
 
 import java.util.List;
 
+import Backend.model.ArtisticMovement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,4 +35,9 @@ public class ArtPieceService {
     }
 
     public ArtPiece saveArtPiece(ArtPiece artPiece){ return artPieceRepository.save(artPiece);}
+
+    public ArtPiece getById(Integer artPieceId) {
+        return artPieceRepository.findByID(artPieceId);
+    }
+
 }

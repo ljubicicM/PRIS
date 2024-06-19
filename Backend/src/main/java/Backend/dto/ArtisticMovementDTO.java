@@ -6,20 +6,10 @@ import java.util.List;
 
 public class ArtisticMovementDTO {
 
-    private int id;
     private String movementName;
     private String text1Movement;
     private String text2Movement;
     private String text3Movement;
-    private List<ArtPiece> artPieces;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getMovementName() {
         return movementName;
@@ -53,11 +43,4 @@ public class ArtisticMovementDTO {
         this.text3Movement = text3Movement;
     }
 
-    public List<ArtPiece> getArtPieces() {
-        return artPieces;
-    }
-
-    public void setArtPieces(List<ArtPiece> artPieces) {
-        this.artPieces = artPieces;
-    }
 }

@@ -5,7 +5,6 @@ import Backend.model.*;
 import java.util.List;
 
 public class ArtPieceDTO {
-    private int id;
     private String name;
     private String address;
     private String description;
@@ -14,19 +13,11 @@ public class ArtPieceDTO {
     private int retentionTime;
     private int yearCreated;
     private byte[] image;
-    private List<Request> requests;
-    private ArtisticMovement artisticMovement;
-    private Epoch epoch;
-    private Author author;
-    private List<Route> routes;
+    private int idArtisticMovement;
+    private int idEpoch;
+    private int idAuthor;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -92,43 +83,27 @@ public class ArtPieceDTO {
         this.image = image;
     }
 
-    public List<Request> getRequests() {
-        return requests;
+    public int getArtisticMovementId() {
+        return idArtisticMovement;
     }
 
-    public void setRequests(List<Request> requests) {
-        this.requests = requests;
+    public void setArtisticMovementId(int idArtisticMovement) {
+        this.idArtisticMovement = idArtisticMovement;
     }
 
-    public ArtisticMovement getArtisticMovement() {
-        return artisticMovement;
+    public int getEpochId() {
+        return idEpoch;
     }
 
-    public void setArtisticMovement(ArtisticMovement artisticMovement) {
-        this.artisticMovement = artisticMovement;
+    public void setEpochId(int epochId) {
+        this.idEpoch = epochId;
     }
 
-    public Epoch getEpoch() {
-        return epoch;
+    public int getAuthorId() {
+        return idAuthor;
     }
 
-    public void setEpoch(Epoch epoch) {
-        this.epoch = epoch;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    public List<Route> getRoutes() {
-        return routes;
-    }
-
-    public void setRoutes(List<Route> routes) {
-        this.routes = routes;
+    public void setAuthorId(int idAuthor) {
+        this.idAuthor = idAuthor;
     }
 }

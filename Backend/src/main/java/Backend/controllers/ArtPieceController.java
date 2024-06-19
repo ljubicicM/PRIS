@@ -3,6 +3,11 @@ package Backend.controllers;
 import java.util.List;
 
 import Backend.dto.ArtPieceDTO;
+import Backend.dto.AuthorDTO;
+import Backend.model.Author;
+import Backend.services.ArtisticMovementService;
+import Backend.services.AuthorService;
+import Backend.services.EpochService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +21,15 @@ import Backend.services.ArtPieceService;
 public class ArtPieceController {
     @Autowired
     private ArtPieceService artPieceService;
+
+    @Autowired
+    private ArtisticMovementService artisticMovementService;
+
+    @Autowired
+    private EpochService epochService;
+
+    @Autowired
+    private AuthorService authorService;
 
     @GetMapping("/yearsCreated")
     private List<Integer> yearsCreated() {
@@ -47,7 +61,6 @@ public class ArtPieceController {
 
         ArtPiece artPiece = new ArtPiece();
 
-        artPiece.setId(artPieceDTO.getId());
         artPiece.setName(artPieceDTO.getName());
         artPiece.setAddress(artPieceDTO.getAddress());
         artPiece.setDescription(artPieceDTO.getDescription());
@@ -56,17 +69,14 @@ public class ArtPieceController {
         artPiece.setRetentionTime(artPieceDTO.getRetentionTime());
         artPiece.setyearCreated(artPieceDTO.getYearCreated());
         artPiece.setImage(artPieceDTO.getImage());
-        artPiece.setRequests(artPieceDTO.getRequests());
-        artPiece.setArtisticMovement(artPieceDTO.getArtisticMovement());
-        artPiece.setEpoch(artPieceDTO.getEpoch());
-        artPiece.setAuthor(artPieceDTO.getAuthor());
-        artPiece.setRoutes(artPieceDTO.getRoutes());
+        artPiece.setArtisticMovement(artisticMovementService.findById(artPieceDTO.getArtisticMovementId()));
+        artPiece.setEpoch(epochService.findById(artPieceDTO.getEpochId()));
+        artPiece.setAuthor(authorService.findById(artPieceDTO.getAuthorId()));
 
         ArtPiece savedArtPiece = artPieceService.saveArtPiece(artPiece);
 
         ArtPieceDTO savedArtPieceDTO = new ArtPieceDTO();
 
-        savedArtPieceDTO.setId(savedArtPiece.getId());
         savedArtPieceDTO.setName(savedArtPiece.getName());
         savedArtPieceDTO.setAddress(savedArtPiece.getAddress());
         savedArtPieceDTO.setDescription(savedArtPiece.getDescription());
@@ -75,11 +85,9 @@ public class ArtPieceController {
         savedArtPieceDTO.setRetentionTime(savedArtPiece.getRetentionTime());
         savedArtPieceDTO.setYearCreated(savedArtPiece.getyearCreated());
         savedArtPieceDTO.setImage(savedArtPiece.getImage());
-        savedArtPieceDTO.setRequests(savedArtPiece.getRequests());
-        savedArtPieceDTO.setArtisticMovement(savedArtPiece.getArtisticMovement());
-        savedArtPieceDTO.setEpoch(savedArtPiece.getEpoch());
-        savedArtPieceDTO.setAuthor(savedArtPiece.getAuthor());
-        savedArtPieceDTO.setRoutes(savedArtPiece.getRoutes());
+        savedArtPieceDTO.setArtisticMovementId(savedArtPiece.getArtisticMovement().getid());
+        savedArtPieceDTO.setEpochId(savedArtPiece.getEpoch().getid());
+        savedArtPieceDTO.setAuthorId(savedArtPiece.getAuthor().getid());
 
         return ResponseEntity.ok(savedArtPieceDTO);
     }

@@ -18,4 +18,6 @@ public class AuthorService {
     }
 
     public Author saveAuthor(Author author) { return authorRepository.save(author); }
+
+    public Author findById(Integer id){ return authorRepository.findByID(id);}
 }

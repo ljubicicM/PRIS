@@ -19,4 +19,6 @@ public class ArtisticMovementService {
     }
 
     public ArtisticMovement saveArtisticMovement(ArtisticMovement artisticMovement){ return artisticMovementRepository.save(artisticMovement);}
+
+    public ArtisticMovement findById(Integer artisticMovementId){ return artisticMovementRepository.findByID(artisticMovementId);}
 }

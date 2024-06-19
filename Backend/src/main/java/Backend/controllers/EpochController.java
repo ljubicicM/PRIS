@@ -29,8 +29,6 @@ public class EpochController {
         epoch.setText1Epoch(epochDTO.getText1Epoch());
         epoch.setText2Epoch(epochDTO.getText2Epoch());
         epoch.setText3Epoch(epochDTO.getText3Epoch());
-        epoch.setid(epochDTO.getId());
-        epoch.setArtPieces(epochDTO.getArtPieces());
 
         Epoch savedEpoch = epochService.saveEpoch(epoch);
 
@@ -40,9 +38,8 @@ public class EpochController {
         savedEpochDTO.setText1Epoch(savedEpoch.getText1Epoch());
         savedEpochDTO.setText2Epoch(savedEpoch.getText2Epoch());
         savedEpochDTO.setText3Epoch(savedEpoch.getText3Epoch());
-        savedEpochDTO.setId(savedEpoch.getid());
-        savedEpochDTO.setArtPieces(savedEpoch.getArtPieces());
 
         return ResponseEntity.ok(savedEpochDTO);
     }
 }
+

@@ -28,22 +28,18 @@ public class ArtisticMovementController {
         ArtisticMovement artisticMovement = new ArtisticMovement();
 
         artisticMovement.setMovementName(artisticMovementDTO.getMovementName());
-        artisticMovement.setid(artisticMovementDTO.getId());
         artisticMovement.setText1Movement(artisticMovementDTO.getText1Movement());
         artisticMovement.setText2Movement(artisticMovementDTO.getText2Movement());
         artisticMovement.setText3Movement(artisticMovementDTO.getText3Movement());
-        artisticMovement.setArtPieces(artisticMovementDTO.getArtPieces());
 
         ArtisticMovement savedArtisticMovement = artisticMovementService.saveArtisticMovement(artisticMovement);
 
         ArtisticMovementDTO savedArtisticMovementDTO = new ArtisticMovementDTO();
 
         savedArtisticMovementDTO.setMovementName(savedArtisticMovement.getMovementName());
-        savedArtisticMovementDTO.setId(savedArtisticMovement.getid());
         savedArtisticMovementDTO.setText1Movement(savedArtisticMovement.getText1Movement());
         savedArtisticMovementDTO.setText2Movement(savedArtisticMovement.getText2Movement());
         savedArtisticMovementDTO.setText3Movement(savedArtisticMovement.getText3Movement());
-        savedArtisticMovementDTO.setArtPieces(savedArtisticMovement.getArtPieces());
 
         return ResponseEntity.ok(savedArtisticMovementDTO);
     }

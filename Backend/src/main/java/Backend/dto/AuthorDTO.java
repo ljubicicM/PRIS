@@ -5,21 +5,11 @@ import Backend.model.ArtPiece;
 import java.util.List;
 
 public class AuthorDTO {
-    private int id;
     private String nameAuthor;
     private String surnameAuthor;
     private String text1Author;
     private String text2Author;
     private String text3Author;
-    private List<ArtPiece> artPieces;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNameAuthor() {
         return nameAuthor;
@@ -61,11 +51,4 @@ public class AuthorDTO {
         this.text3Author = text3Author;
     }
 
-    public List<ArtPiece> getArtPieces() {
-        return artPieces;
-    }
-
-    public void setArtPieces(List<ArtPiece> artPieces) {
-        this.artPieces = artPieces;
-    }
 }

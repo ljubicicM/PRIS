@@ -19,4 +19,6 @@ public class EpochService {
     }
 
     public Epoch saveEpoch(Epoch epoch){ return epochRepository.save(epoch);}
+
+    public Epoch findById(Integer id){ return epochRepository.findByID(id);}
 }
