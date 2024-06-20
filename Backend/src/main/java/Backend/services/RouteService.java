@@ -1,5 +1,7 @@
 package Backend.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,14 @@ public class RouteService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public List<Route> getGlobalRoutes() {
+    return routeRepository.findGlobalRoutes();
+    }
+
+    public List<Route> getRoutesForUser(Integer userId) {
+        return routeRepository.findRoutesForUser(userId);
     }
 
 }
