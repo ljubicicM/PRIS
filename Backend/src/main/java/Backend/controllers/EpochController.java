@@ -23,7 +23,7 @@ public class EpochController {
     }
 
     @PostMapping("/saveEpoch")
-    public boolean saveAuthor(@RequestBody EpochDTO epochDTO) {
+    public boolean saveEpoch(@RequestBody EpochDTO epochDTO) {
         Epoch epoch = new Epoch();
         epoch.setEpochName(epochDTO.getEpochName());
         epoch.setText1Epoch(epochDTO.getText1Epoch());

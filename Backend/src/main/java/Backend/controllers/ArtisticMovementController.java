@@ -24,7 +24,7 @@ public class ArtisticMovementController {
     }
 
     @PostMapping("/saveArtisticMovement")
-    public boolean saveAuthor(@RequestBody ArtisticMovementDTO artisticMovementDTO) {
+    public boolean saveArtisticMovement(@RequestBody ArtisticMovementDTO artisticMovementDTO) {
         ArtisticMovement artisticMovement = new ArtisticMovement();
 
         artisticMovement.setMovementName(artisticMovementDTO.getMovementName());

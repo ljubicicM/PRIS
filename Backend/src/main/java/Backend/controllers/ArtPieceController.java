@@ -57,7 +57,7 @@ public class ArtPieceController {
     }
 
     @PostMapping("/saveArtPiece")
-    public boolean saveAuthor(@RequestBody ArtPieceDTO artPieceDTO) {
+    public boolean saveArtPiece(@RequestBody ArtPieceDTO artPieceDTO) {
 
         ArtPiece artPiece = new ArtPiece();
 
