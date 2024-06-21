@@ -24,7 +24,7 @@ public class AuthorController {
     }
 
     @PostMapping("/saveAuthor")
-    public ResponseEntity<AuthorDTO> saveAuthor(@RequestBody AuthorDTO authorDTO) {
+    public boolean saveAuthor(@RequestBody AuthorDTO authorDTO) {
         Author author = new Author();
         author.setNameAuthor(authorDTO.getNameAuthor());
         author.setSurnameAuthor(authorDTO.getSurnameAuthor());
@@ -34,13 +34,6 @@ public class AuthorController {
 
         Author savedAuthor = authorService.saveAuthor(author);
 
-        AuthorDTO savedAuthorDTO = new AuthorDTO();
-        savedAuthorDTO.setNameAuthor(savedAuthor.getNameAuthor());
-        savedAuthorDTO.setSurnameAuthor(savedAuthor.getSurnameAuthor());
-        savedAuthorDTO.setText1Author(savedAuthor.getText1Author());
-        savedAuthorDTO.setText2Author(savedAuthor.getText2Author());
-        savedAuthorDTO.setText3Author(savedAuthor.getText3Author());
-
-        return ResponseEntity.ok(savedAuthorDTO);
+        return savedAuthor == null;
     }
 }

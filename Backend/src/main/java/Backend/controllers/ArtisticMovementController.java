@@ -24,7 +24,7 @@ public class ArtisticMovementController {
     }
 
     @PostMapping("/saveArtisticMovement")
-    public ResponseEntity<ArtisticMovementDTO> saveAuthor(@RequestBody ArtisticMovementDTO artisticMovementDTO) {
+    public boolean saveAuthor(@RequestBody ArtisticMovementDTO artisticMovementDTO) {
         ArtisticMovement artisticMovement = new ArtisticMovement();
 
         artisticMovement.setMovementName(artisticMovementDTO.getMovementName());
@@ -34,13 +34,6 @@ public class ArtisticMovementController {
 
         ArtisticMovement savedArtisticMovement = artisticMovementService.saveArtisticMovement(artisticMovement);
 
-        ArtisticMovementDTO savedArtisticMovementDTO = new ArtisticMovementDTO();
-
-        savedArtisticMovementDTO.setMovementName(savedArtisticMovement.getMovementName());
-        savedArtisticMovementDTO.setText1Movement(savedArtisticMovement.getText1Movement());
-        savedArtisticMovementDTO.setText2Movement(savedArtisticMovement.getText2Movement());
-        savedArtisticMovementDTO.setText3Movement(savedArtisticMovement.getText3Movement());
-
-        return ResponseEntity.ok(savedArtisticMovementDTO);
+        return savedArtisticMovement == null;
     }
 }

@@ -57,7 +57,7 @@ public class ArtPieceController {
     }
 
     @PostMapping("/saveArtPiece")
-    public ResponseEntity<ArtPieceDTO> saveAuthor(@RequestBody ArtPieceDTO artPieceDTO) {
+    public boolean saveAuthor(@RequestBody ArtPieceDTO artPieceDTO) {
 
         ArtPiece artPiece = new ArtPiece();
 
@@ -75,21 +75,7 @@ public class ArtPieceController {
 
         ArtPiece savedArtPiece = artPieceService.saveArtPiece(artPiece);
 
-        ArtPieceDTO savedArtPieceDTO = new ArtPieceDTO();
-
-        savedArtPieceDTO.setName(savedArtPiece.getName());
-        savedArtPieceDTO.setAddress(savedArtPiece.getAddress());
-        savedArtPieceDTO.setDescription(savedArtPiece.getDescription());
-        savedArtPieceDTO.setxCoordinate(savedArtPiece.getxCoordinate());
-        savedArtPieceDTO.setyCoordinate(savedArtPiece.getyCoordinate());
-        savedArtPieceDTO.setRetentionTime(savedArtPiece.getRetentionTime());
-        savedArtPieceDTO.setYearCreated(savedArtPiece.getyearCreated());
-        savedArtPieceDTO.setImage(savedArtPiece.getImage());
-        savedArtPieceDTO.setArtisticMovementId(savedArtPiece.getArtisticMovement().getid());
-        savedArtPieceDTO.setEpochId(savedArtPiece.getEpoch().getid());
-        savedArtPieceDTO.setAuthorId(savedArtPiece.getAuthor().getid());
-
-        return ResponseEntity.ok(savedArtPieceDTO);
+        return savedArtPiece == null;
     }
 
 }
