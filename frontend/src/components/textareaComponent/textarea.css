@@ -26,4 +26,8 @@
     background-color: var(--primary-color);
     width: 370px;
     border: var(--text-color) 1px solid !important;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-style: bold;
 }
