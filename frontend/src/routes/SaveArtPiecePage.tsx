@@ -22,7 +22,6 @@ export const SaveArtPiecePage = () => {
     const [authors, setAuthors] = useState([]);
 
     const SaveArtPiece = () => {
-        console.log(artPieceEpoch);
         axios.post("http://localhost:8082/artPiece/saveArtPiece", {
             name: artPieceName,
             description: artPieceDescription1,
