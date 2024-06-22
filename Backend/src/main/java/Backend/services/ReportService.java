@@ -68,8 +68,6 @@ public class ReportService {
                             epochIds.add(p.getEpoch().getid());
                         }
                         if (p.hasMovement && !movementIds.contains(p.getArtisticMovement().getid())) {
-                            System.out.println(p.getArtisticMovement().getMovementName() + ": "
-                                    + p.getArtisticMovement().getText2Movement() + "\n");
                             context += p.getArtisticMovement().getMovementName() + ": "
                                     + p.getArtisticMovement().getText2Movement() + "\n";
                             movementIds.add(p.getArtisticMovement().getid());
