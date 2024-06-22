@@ -95,7 +95,7 @@ export const SaveArtPiecePage = () => {
     return (
         <div className="save-pages-container-outer">
             <div className="save-pages-container">
-                <h1>Save Epoch</h1>
+                <h1>Save Art Piece</h1>
                 <div className="save-artpiece-container">
                     <Textfield headerText="Art Piece Name" value={artPieceName} setValue={setArtPieceName} placeholder="Art Piece Name" />
                     <TextareaComponent label="Art Piece Description 1" value={artPieceDescription1} onChange={(e: any) => setArtPieceDescription1(e.target.value)} placeholder="Art Piece Description 1" />
