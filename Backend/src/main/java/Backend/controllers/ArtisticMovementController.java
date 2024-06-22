@@ -2,14 +2,12 @@ package Backend.controllers;
 
 import java.util.List;
 
+import Backend.dto.ArtisticMovementDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import Backend.model.ArtisticMovement;
 import Backend.services.ArtisticMovementService;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/artisticMovement")
@@ -24,4 +22,11 @@ public class ArtisticMovementController {
         return artisticMovementService.getAllArtisticMovements();
     }
 
+    @PostMapping("/saveArtisticMovement")
+    public ArtisticMovement saveArtisticMovement(@RequestBody ArtisticMovementDTO artisticMovementDTO) {
+
+        ArtisticMovement savedArtisticMovement = artisticMovementService.saveArtisticMovement(artisticMovementDTO);
+
+        return savedArtisticMovement;
+    }
 }

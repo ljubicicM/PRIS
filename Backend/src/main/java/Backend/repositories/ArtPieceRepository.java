@@ -21,4 +21,8 @@ public interface ArtPieceRepository extends JpaRepository<ArtPiece, Integer> {
 
     @Query("SELECT a FROM ArtPiece a WHERE a.epoch.id = ?1")
     public List<ArtPiece> findByEpoch(Integer epochId);
+
+    @Query("SELECT a FROM ArtPiece a WHERE a.id = ?1")
+    public ArtPiece findByID(Integer id);
+
 }

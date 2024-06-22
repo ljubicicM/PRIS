@@ -1,13 +1,9 @@
 package Backend.controllers;
 
 import java.util.List;
-
+import Backend.dto.ArtPieceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import Backend.model.ArtPiece;
 import Backend.services.ArtPieceService;
@@ -42,6 +38,14 @@ public class ArtPieceController {
     @GetMapping("/getByEpoch")
     private List<ArtPiece> getByEpoch(@RequestParam(value = "epochId") Integer epochId) {
         return artPieceService.getByEpoch(epochId);
+    }
+
+    @PostMapping("/saveArtPiece")
+    public ArtPiece saveArtPiece(@RequestBody ArtPieceDTO artPieceDTO) {
+
+        ArtPiece savedArtPiece = artPieceService.saveArtPiece(artPieceDTO);
+
+        return savedArtPiece;
     }
 
 }
