@@ -1,0 +1,29 @@
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-label {
+    text-align: left;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+
+.textarea {
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    background-color: var(--primary-color);
+    width: 370px;
+    border: var(--text-color) 1px solid !important;
+}

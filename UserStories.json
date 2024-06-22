@@ -406,5 +406,41 @@
 		"story": "Vodič može da doda epohu",
 		"comment": "",
 		"acceptance criteria": []
+	},
+	"story_35": {
+		"index": "",
+		"story_pts": "2",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da da vidi globalne rute",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_36": {
+		"index": "",
+		"story_pts": "2",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Turista može da da vidi svoje rute",
+		"comment": "",
+		"acceptance criteria": []
+	},
+	"story_37": {
+		"index": "",
+		"story_pts": "2",
+		"date_created": "03-06-2024",
+		"part_of_sprint": "None",
+		"status": "BACKLOG",
+		"date_started": "None",
+		"date_completed": "None",
+		"story": "Neregistrovani posetilac može da da vidi globalne rute",
+		"comment": "",
+		"acceptance criteria": []
 	}
 }

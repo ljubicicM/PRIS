@@ -1,0 +1,27 @@
+.save-pages-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save-pages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    margin-top: 40px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.save-pages-container h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
