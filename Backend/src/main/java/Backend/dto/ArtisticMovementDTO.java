@@ -1,9 +1,5 @@
 package Backend.dto;
 
-import Backend.model.ArtPiece;
-
-import java.util.List;
-
 public class ArtisticMovementDTO {
 
     private String movementName;

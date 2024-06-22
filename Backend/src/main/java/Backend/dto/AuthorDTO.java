@@ -1,9 +1,5 @@
 package Backend.dto;
 
-import Backend.model.ArtPiece;
-
-import java.util.List;
-
 public class AuthorDTO {
     private String nameAuthor;
     private String surnameAuthor;

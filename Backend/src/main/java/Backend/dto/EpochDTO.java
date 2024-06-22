@@ -1,10 +1,5 @@
 package Backend.dto;
 
-import Backend.model.ArtPiece;
-import Backend.model.SignificantEvent;
-
-import java.util.List;
-
 public class EpochDTO {
     private String epochName;
     private String text1Epoch;

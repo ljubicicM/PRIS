@@ -2,15 +2,24 @@ package Backend.services;
 
 import java.util.List;
 
-import Backend.model.ArtisticMovement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import Backend.dto.ArtPieceDTO;
 import Backend.model.ArtPiece;
 import Backend.repositories.ArtPieceRepository;
 
 @Service
 public class ArtPieceService {
+    @Autowired
+    private ArtisticMovementService artisticMovementService;
+
+    @Autowired
+    private EpochService epochService;
+
+    @Autowired
+    private AuthorService authorService;
+
     @Autowired
     private ArtPieceRepository artPieceRepository;
 
@@ -34,7 +43,26 @@ public class ArtPieceService {
         return artPieceRepository.findByEpoch(epochId);
     }
 
-    public ArtPiece saveArtPiece(ArtPiece artPiece){ return artPieceRepository.save(artPiece);}
+    public ArtPiece saveArtPiece(ArtPieceDTO artPieceDTO) {
+        ArtPiece artPiece = new ArtPiece();
+        System.out.println(artPieceDTO.getArtisticMovementId());
+        System.out.println(artPieceDTO.getEpochId());
+        System.out.println(artPieceDTO.getAuthorId());
+        System.out.println(artPieceDTO.getYearCreated());
+        artPiece.setName(artPieceDTO.getName());
+        artPiece.setAddress(artPieceDTO.getAddress());
+        artPiece.setDescription(artPieceDTO.getDescription());
+        artPiece.setxCoordinate(artPieceDTO.getxCoordinate());
+        artPiece.setyCoordinate(artPieceDTO.getyCoordinate());
+        artPiece.setRetentionTime(artPieceDTO.getRetentionTime());
+        artPiece.setyearCreated(artPieceDTO.getYearCreated());
+        artPiece.setImage(artPieceDTO.getImage());
+        artPiece.setArtisticMovement(artisticMovementService.findById(artPieceDTO.getArtisticMovementId()));
+        artPiece.setEpoch(epochService.findById(artPieceDTO.getEpochId()));
+        artPiece.setAuthor(authorService.findById(artPieceDTO.getAuthorId()));
+
+        return artPieceRepository.save(artPiece);
+    }
 
     public ArtPiece getById(Integer artPieceId) {
         return artPieceRepository.findByID(artPieceId);

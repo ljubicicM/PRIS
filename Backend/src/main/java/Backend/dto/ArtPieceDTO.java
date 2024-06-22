@@ -1,8 +1,6 @@
 package Backend.dto;
 
-import Backend.model.*;
-
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ArtPieceDTO {
     private String name;
@@ -13,11 +11,12 @@ public class ArtPieceDTO {
     private int retentionTime;
     private int yearCreated;
     private byte[] image;
-    private int idArtisticMovement;
-    private int idEpoch;
-    private int idAuthor;
-
-
+    @JsonProperty("idArtisticMovement")
+    private Integer idArtisticMovement;
+    @JsonProperty("idEpoch")
+    private Integer idEpoch;
+    @JsonProperty("idAuthor")
+    private Integer idAuthor;
 
     public String getName() {
         return name;
@@ -83,27 +82,27 @@ public class ArtPieceDTO {
         this.image = image;
     }
 
-    public int getArtisticMovementId() {
+    public Integer getArtisticMovementId() {
         return idArtisticMovement;
     }
 
-    public void setArtisticMovementId(int idArtisticMovement) {
+    public void setArtisticMovementId(Integer idArtisticMovement) {
         this.idArtisticMovement = idArtisticMovement;
     }
 
-    public int getEpochId() {
+    public Integer getEpochId() {
         return idEpoch;
     }
 
-    public void setEpochId(int epochId) {
+    public void setEpochId(Integer epochId) {
         this.idEpoch = epochId;
     }
 
-    public int getAuthorId() {
+    public Integer getAuthorId() {
         return idAuthor;
     }
 
-    public void setAuthorId(int idAuthor) {
+    public void setAuthorId(Integer idAuthor) {
         this.idAuthor = idAuthor;
     }
 }

@@ -1,15 +1,8 @@
 package Backend.controllers;
 
 import java.util.List;
-
 import Backend.dto.ArtPieceDTO;
-import Backend.dto.AuthorDTO;
-import Backend.model.Author;
-import Backend.services.ArtisticMovementService;
-import Backend.services.AuthorService;
-import Backend.services.EpochService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import Backend.model.ArtPiece;
@@ -21,15 +14,6 @@ import Backend.services.ArtPieceService;
 public class ArtPieceController {
     @Autowired
     private ArtPieceService artPieceService;
-
-    @Autowired
-    private ArtisticMovementService artisticMovementService;
-
-    @Autowired
-    private EpochService epochService;
-
-    @Autowired
-    private AuthorService authorService;
 
     @GetMapping("/yearsCreated")
     private List<Integer> yearsCreated() {
@@ -57,25 +41,11 @@ public class ArtPieceController {
     }
 
     @PostMapping("/saveArtPiece")
-    public boolean saveArtPiece(@RequestBody ArtPieceDTO artPieceDTO) {
+    public ArtPiece saveArtPiece(@RequestBody ArtPieceDTO artPieceDTO) {
 
-        ArtPiece artPiece = new ArtPiece();
+        ArtPiece savedArtPiece = artPieceService.saveArtPiece(artPieceDTO);
 
-        artPiece.setName(artPieceDTO.getName());
-        artPiece.setAddress(artPieceDTO.getAddress());
-        artPiece.setDescription(artPieceDTO.getDescription());
-        artPiece.setxCoordinate(artPieceDTO.getxCoordinate());
-        artPiece.setyCoordinate(artPieceDTO.getyCoordinate());
-        artPiece.setRetentionTime(artPieceDTO.getRetentionTime());
-        artPiece.setyearCreated(artPieceDTO.getYearCreated());
-        artPiece.setImage(artPieceDTO.getImage());
-        artPiece.setArtisticMovement(artisticMovementService.findById(artPieceDTO.getArtisticMovementId()));
-        artPiece.setEpoch(epochService.findById(artPieceDTO.getEpochId()));
-        artPiece.setAuthor(authorService.findById(artPieceDTO.getAuthorId()));
-
-        ArtPiece savedArtPiece = artPieceService.saveArtPiece(artPiece);
-
-        return savedArtPiece == null;
+        return savedArtPiece;
     }
 
 }

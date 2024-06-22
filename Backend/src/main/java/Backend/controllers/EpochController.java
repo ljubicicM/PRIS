@@ -4,7 +4,6 @@ import java.util.List;
 
 import Backend.dto.EpochDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import Backend.model.Epoch;
@@ -23,17 +22,10 @@ public class EpochController {
     }
 
     @PostMapping("/saveEpoch")
-    public boolean saveEpoch(@RequestBody EpochDTO epochDTO) {
-        Epoch epoch = new Epoch();
-        epoch.setEpochName(epochDTO.getEpochName());
-        epoch.setText1Epoch(epochDTO.getText1Epoch());
-        epoch.setText2Epoch(epochDTO.getText2Epoch());
-        epoch.setText3Epoch(epochDTO.getText3Epoch());
+    public Epoch saveEpoch(@RequestBody EpochDTO epochDTO) {
 
-        Epoch savedEpoch = epochService.saveEpoch(epoch);
+        Epoch savedEpoch = epochService.saveEpoch(epochDTO);
 
-
-        return savedEpoch == null;
+        return savedEpoch;
     }
 }
-
