@@ -3,7 +3,7 @@ package Backend.dto;
 import java.util.List;
 
 public class ReportDTO {
-    public List<ArtPieceDTO> artPieces;
+    public List<ArtPieceReportDTO> artPieces;
     public String routeString;
     public String hours;
     public String minutes;
@@ -12,11 +12,11 @@ public class ReportDTO {
     public ReportDTO() {
     }
 
-    public List<ArtPieceDTO> getArtPieces() {
+    public List<ArtPieceReportDTO> getArtPieces() {
         return this.artPieces;
     }
 
-    public void setArtPieces(List<ArtPieceDTO> artPieces) {
+    public void setArtPieces(List<ArtPieceReportDTO> artPieces) {
         this.artPieces = artPieces;
     }
 

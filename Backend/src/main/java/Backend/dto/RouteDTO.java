@@ -3,19 +3,20 @@ package Backend.dto;
 import java.util.List;
 
 import Backend.model.ArtPiece;
+
 public class RouteDTO {
 
     private String routeName;
 
-	private String routeDescription;
+    private String routeDescription;
 
-	private int routeDuration;
+    private int routeDuration;
 
-	private boolean routeVisibility;
+    private boolean routeVisibility;
 
-	private int userId;
+    private int userId;
 
-	private List<ArtPiece> artPieces;
+    private List<ArtPiece> artPieces;
 
     public RouteDTO() {
     }

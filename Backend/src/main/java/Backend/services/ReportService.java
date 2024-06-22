@@ -1,6 +1,6 @@
 package Backend.services;
 
-import Backend.dto.ArtPieceDTO;
+import Backend.dto.ArtPieceReportDTO;
 import Backend.dto.ReportDTO;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -40,12 +40,12 @@ public class ReportService {
 
     public String getContext(ReportDTO dto) {
         String context = "";
-        List<ArtPieceDTO> artPieces = dto.getArtPieces();
+        List<ArtPieceReportDTO> artPieces = dto.getArtPieces();
         List<Integer> epochIds = new LinkedList<>();
         List<Integer> movementIds = new LinkedList<>();
         List<Integer> authorIds = new LinkedList<>();
         if (artPieces.size() > 0) {
-            for (ArtPieceDTO p : artPieces) {
+            for (ArtPieceReportDTO p : artPieces) {
                 switch (dto.getRouteGenerality()) {
                     case "1":
                         if (p.hasEvent && !epochIds.contains(p.getEpoch().getid())) {
