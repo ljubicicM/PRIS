@@ -3,6 +3,7 @@ import { Textfield } from "../components/textFieldComponent/textfield";
 import "./styles/savePages.css"
 import { Button } from "../components/buttonComponent/Button";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
+import axios from "axios";
 
 export const SaveEpochPage = () => {
 
@@ -13,7 +14,20 @@ export const SaveEpochPage = () => {
     const [epochDescription3, setEpochDescription3] = useState("");
 
     const saveEpoch = () => {
-        console.log(epochDescription3);
+        axios.post("http://localhost:8082/epoch/saveEpoch", {
+            epochName: epochName,
+            text1Epoch: epochDescription1,
+            text2Epoch: epochDescription2,
+            text3Epoch: epochDescription3
+        }).then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        });
+        setEpochName("");
+        setEpochDescription1("");
+        setEpochDescription2("");
+        setEpochDescription3("");
     }
 
     return (

@@ -8,11 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 900px;
     width: 800px;
     flex-direction: column;
     background-color: var(--background-color);
-    margin-top: 40px;
     border-radius: 10px;
     gap: 10px;
 }
@@ -24,4 +23,23 @@ h4,
 h5,
 h6 {
     color: var(--text-color);
+    margin: 1px;
+}
+
+.save-artpiece-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.save-artpiece-dropdowns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
 }

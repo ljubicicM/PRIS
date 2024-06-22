@@ -12,7 +12,7 @@ import { CRChooseContextPage } from './routes/CRChooseContextPage';
 import { SaveEpochPage } from './routes/SaveEpochPage';
 import { SaveArtistPage } from './routes/SaveArtistPage';
 import { SaveArtisticMovement } from './routes/SaveArtisticMovement';
-import { SaveArtPiece } from './routes/SaveArtPiece';
+import { SaveArtPiecePage } from './routes/SaveArtPiecePage';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
             <Route path="/save/epoch" element={<SaveEpochPage />} />
             <Route path="save/artist" element={<SaveArtistPage />} />
             <Route path="save/artisticmovement" element={<SaveArtisticMovement />} />
-            <Route path="save/artpiece" element={<SaveArtPiece />} />
+            <Route path="save/artpiece" element={<SaveArtPiecePage />} />
           </Routes>
         </Router>
       </Context.Provider>

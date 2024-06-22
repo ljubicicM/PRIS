@@ -45,10 +45,6 @@ public class ArtPieceService {
 
     public ArtPiece saveArtPiece(ArtPieceDTO artPieceDTO) {
         ArtPiece artPiece = new ArtPiece();
-        System.out.println(artPieceDTO.getArtisticMovementId());
-        System.out.println(artPieceDTO.getEpochId());
-        System.out.println(artPieceDTO.getAuthorId());
-        System.out.println(artPieceDTO.getYearCreated());
         artPiece.setName(artPieceDTO.getName());
         artPiece.setAddress(artPieceDTO.getAddress());
         artPiece.setDescription(artPieceDTO.getDescription());
