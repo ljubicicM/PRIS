@@ -45,7 +45,7 @@ export const LoginPage = () => {
                             break;
                     }
                     setIsNavBarVisible(true);
-                    navigate('/cr/searchby');
+                    navigate('/');
                 } else {
                     alert('Wrong email or password');
                 }

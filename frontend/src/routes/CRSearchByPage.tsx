@@ -175,7 +175,7 @@ export const CRSearchByPage = () => {
                                                 <img className='create-route-art-piece-image' src={artPiecePlaceholder} alt={artPiece.name} />
                                             </td>
                                             <td className='create-route-art-piece-name'>
-                                                <h2>{artPiece.name}</h2>
+                                                <h1>{artPiece.name}</h1>
                                             </td>
                                             <td className='create-route-art-piece-add'>
                                                 <Button label='Add' size='medium' isEnabeld={true} onClick={addArtPiece(artPiece.id)} />

@@ -9,10 +9,13 @@ import { NavBar } from './components/navBarComponent/NavBar';
 import { HomePage } from './routes/HomePage';
 import { CRSortByPage } from './routes/CRSortByPage';
 import { CRChooseContextPage } from './routes/CRChooseContextPage';
+import { SavedRoutesPage } from './routes/SavedRoutesPage';
+import { LogoutProcess } from './routes/LogoutProcess';
 
 
 function App() {
-  const [userType, setUserType] = useState("admin");
+
+  const [userType, setUserType] = useState("");
   const [userId, setUserId] = useState(0);
   const [isNavBarVisible, setIsNavBarVisible] = useState(true);
   return (
@@ -31,6 +34,8 @@ function App() {
             <Route path="/cr/searchby" element={<CRSearchByPage />} />
             <Route path="/cr/sortby" element={<CRSortByPage />} />
             <Route path="/cr/choosecontext" element={<CRChooseContextPage />} />
+            <Route path="/savedroutes" element={<SavedRoutesPage />} />
+            <Route path="/logout" element={<LogoutProcess />} />
           </Routes>
         </Router>
       </Context.Provider>

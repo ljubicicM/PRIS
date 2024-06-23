@@ -1,0 +1,54 @@
+.saved-routes-container {
+    display: flex;
+    align-items: center;
+    height: 800px;
+    width: 1750px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.saved-routes-container-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-routes-container h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+.route {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 50px;
+    background-color: var(--background-color);
+    height: 160px;
+    border: 1px solid var(--text-color);
+}
+
+.route h1,
+h2,
+Button {
+    width: 150px !important;
+    word-wrap: break-word;
+}
+
+.route h3 {
+    width: 400px;
+}
+
+
+.saved-routes-box {
+    height: 450px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}

@@ -25,4 +25,9 @@ public class UserController {
         return userService.loginUser(email, password);
     }
 
+    @PostMapping("/initAdmin")
+    public void initAdmin() {
+        userService.initAdmin();
+    }
+
 }

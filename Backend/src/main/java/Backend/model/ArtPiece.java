@@ -2,17 +2,16 @@ package Backend.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.JoinColumn;
 
 @Entity
 public class ArtPiece {
@@ -47,9 +46,9 @@ public class ArtPiece {
     @ManyToOne
     private Author author;
 
-    @ManyToMany
-    @JoinTable(name = "artpiece_route", joinColumns = @JoinColumn(name = "artpiece_id"), inverseJoinColumns = @JoinColumn(name = "route_id"))
-    private List<Route> routes;
+    @JsonIgnore
+    @OneToMany(mappedBy = "artPiece")
+    private List<ArtPieceRoute> artPieceRoutes;
 
     public ArtPiece() {
         super();
@@ -171,12 +170,12 @@ public class ArtPiece {
         this.author = author;
     }
 
-    public List<Route> getRoutes() {
-        return routes;
+    public List<ArtPieceRoute> getArtPieceRoutes() {
+        return artPieceRoutes;
     }
 
-    public void setRoutes(List<Route> routes) {
-        this.routes = routes;
+    public void setArtPieceRoutes(List<ArtPieceRoute> artPieceRoutes) {
+        this.artPieceRoutes = artPieceRoutes;
     }
 
 }

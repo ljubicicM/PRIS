@@ -68,4 +68,8 @@ public class ArtPieceService {
         return artPieceRepository.findByID(artPieceId);
     }
 
+    public List<ArtPiece> getArtpiecesForRoute(Integer routeId) {
+        return artPieceRepository.findByRouteId(routeId);
+    }
+
 }

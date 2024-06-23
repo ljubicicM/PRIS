@@ -38,4 +38,14 @@ public class UserService {
 
         return null;
     }
+
+    public void initAdmin() {
+        User admin = new User();
+        admin.setEmailUser("admin@admin.admin");
+        admin.setPasswordUser(passwordEncoder.encode("admin"));
+        admin.setRoleUser("admin");
+        admin.setUsernameUser("admin");
+        admin.setPhoneUser("1234567890");
+        this.registerUser(admin);
+    }
 }

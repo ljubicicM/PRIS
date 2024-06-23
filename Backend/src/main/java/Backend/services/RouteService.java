@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Backend.dto.RouteDTO;
+import Backend.model.ArtPiece;
+import Backend.model.ArtPieceRoute;
 import Backend.model.Route;
 import Backend.model.User;
+import Backend.repositories.ArtPieceRouteRepository;
 import Backend.repositories.RouteRepository;
 import Backend.repositories.UserRepository;
 
@@ -15,6 +18,9 @@ import Backend.repositories.UserRepository;
 public class RouteService {
     @Autowired
     private RouteRepository routeRepository;
+
+    @Autowired
+    private ArtPieceRouteRepository artPieceRouteRepository;
 
     @Autowired
     private UserRepository userRepository;
@@ -25,11 +31,14 @@ public class RouteService {
         route.setRouteDescription(dto.getRouteDescription());
         route.setRouteDuration(dto.getRouteDuration());
         route.setRouteVisibility(dto.getRouteVisibility());
-        route.setArtPieces(dto.getArtPieces());
         User user = userRepository.findById(dto.getUserId()).get();
         route.setUser(user);
+        routeRepository.save(route);
+        for (ArtPiece ap : dto.getArtPieces()) {
+            artPieceRouteRepository.save(new ArtPieceRoute(ap, route));
+        }
         try {
-            routeRepository.save(route);
+
             return true;
         } catch (Exception e) {
             return false;
@@ -37,7 +46,7 @@ public class RouteService {
     }
 
     public List<Route> getGlobalRoutes() {
-    return routeRepository.findGlobalRoutes();
+        return routeRepository.findGlobalRoutes();
     }
 
     public List<Route> getRoutesForUser(Integer userId) {

@@ -2,6 +2,8 @@ package Backend.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -22,8 +24,9 @@ public class Route {
 	@ManyToOne
 	private User user;
 
-	@ManyToMany(mappedBy = "routes")
-	private List<ArtPiece> artPieces;
+	@JsonIgnore
+	@OneToMany(mappedBy = "route")
+	private List<ArtPieceRoute> artPieceRoutes;
 
 	public Route() {
 	}
@@ -83,11 +86,11 @@ public class Route {
 		this.user = user;
 	}
 
-	public List<ArtPiece> getArtPieces() {
-		return this.artPieces;
+	public List<ArtPieceRoute> getArtPieceRoutes() {
+		return this.artPieceRoutes;
 	}
 
-	public void setArtPieces(List<ArtPiece> artPieces) {
-		this.artPieces = artPieces;
+	public void setArtPieceRoutes(List<ArtPieceRoute> artPieceRoutes) {
+		this.artPieceRoutes = artPieceRoutes;
 	}
 }
