@@ -35,7 +35,7 @@ export const LoginPage = () => {
                             setUserType('guide');
                             setUserId(response.data.id);
                             break;
-                        case 'Admin':
+                        case 'admin':
                             setUserType('admin');
                             setUserId(response.data.id);
                             break;

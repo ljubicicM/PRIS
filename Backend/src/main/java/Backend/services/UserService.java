@@ -42,7 +42,7 @@ public class UserService {
     public void initAdmin() {
         User admin = new User();
         admin.setEmailUser("admin@admin.admin");
-        admin.setPasswordUser(passwordEncoder.encode("admin"));
+        admin.setPasswordUser("admin");
         admin.setRoleUser("admin");
         admin.setUsernameUser("admin");
         admin.setPhoneUser("1234567890");
