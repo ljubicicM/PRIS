@@ -48,4 +48,8 @@ public class ArtPieceController {
         return savedArtPiece;
     }
 
+    @GetMapping("/getArtpiecesForRoute")
+    public List<ArtPiece> getArtpiecesForRoute(@RequestParam(value = "routeId") Integer routeId) {
+        return artPieceService.getArtpiecesForRoute(routeId);
+    }
 }

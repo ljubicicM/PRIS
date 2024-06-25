@@ -73,7 +73,7 @@ export const CRChooseContextPage = () => {
         <div className='route-create-container-outer'>
             <div className="route-create-container">
                 <h1>Choose context and generality</h1>
-                <h2>The context you choose will be shown in your guide</h2>
+                <h1>The context you choose will be shown in your guide</h1>
                 <div className="route-create-context-container" >
                     {artPieces.map((artPiece: any, index: number) => {
                         return (

@@ -13,10 +13,13 @@ import { SaveEpochPage } from './routes/SaveEpochPage';
 import { SaveArtistPage } from './routes/SaveArtistPage';
 import { SaveArtisticMovement } from './routes/SaveArtisticMovement';
 import { SaveArtPiecePage } from './routes/SaveArtPiecePage';
+import { SavedRoutesPage } from './routes/SavedRoutesPage';
+import { LogoutProcess } from './routes/LogoutProcess';
 
 
 function App() {
-  const [userType, setUserType] = useState("admin");
+
+  const [userType, setUserType] = useState("");
   const [userId, setUserId] = useState(0);
   const [isNavBarVisible, setIsNavBarVisible] = useState(true);
   return (
@@ -39,6 +42,8 @@ function App() {
             <Route path="save/artist" element={<SaveArtistPage />} />
             <Route path="save/artisticmovement" element={<SaveArtisticMovement />} />
             <Route path="save/artpiece" element={<SaveArtPiecePage />} />
+            <Route path="/savedroutes" element={<SavedRoutesPage />} />
+            <Route path="/logout" element={<LogoutProcess />} />
           </Routes>
         </Router>
       </Context.Provider>
