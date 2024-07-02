@@ -1,10 +1,13 @@
 package Backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import Backend.model.User;
 import Backend.services.UserService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -30,4 +33,9 @@ public class UserController {
         userService.initAdmin();
     }
 
+    @GetMapping("/pendingUsers")
+    public ResponseEntity<List<User>> getPendingUsers() {
+        List<User> pendingUsers = userService.getPendingUsers();
+        return ResponseEntity.ok(pendingUsers);
+    }
 }

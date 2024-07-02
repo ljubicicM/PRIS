@@ -7,6 +7,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import Backend.model.User;
 import Backend.repositories.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -47,5 +49,9 @@ public class UserService {
         admin.setUsernameUser("admin");
         admin.setPhoneUser("1234567890");
         this.registerUser(admin);
+    }
+
+    public List<User> getPendingUsers() {
+        return userRepository.findByRoleUser("pending");
     }
 }
