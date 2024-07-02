@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import Backend.model.ArtPiece;
 import Backend.services.ArtPieceService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/artPiece")
@@ -51,5 +53,10 @@ public class ArtPieceController {
     @GetMapping("/getArtpiecesForRoute")
     public List<ArtPiece> getArtpiecesForRoute(@RequestParam(value = "routeId") Integer routeId) {
         return artPieceService.getArtpiecesForRoute(routeId);
+    }
+
+    @PutMapping("updateArtPieceDescription")
+    public boolean updateAP(@RequestParam(value = "id") String id, @RequestParam(value = "desc") String description) {
+        return artPieceService.updateArtPieceDescription(id, description);
     }
 }

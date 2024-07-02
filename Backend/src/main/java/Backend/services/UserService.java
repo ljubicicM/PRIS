@@ -48,4 +48,24 @@ public class UserService {
         admin.setPhoneUser("1234567890");
         this.registerUser(admin);
     }
+
+    public boolean deleteUserById(int id) {
+        if (userRepository.findById(id) != null) {
+            userRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateUserRole(int id) {
+        if (userRepository.findById(id) != null) {
+            User user = userRepository.findById(id).get();
+            if (user.getRoleUser().equals("PENDING")) {
+                user.setRoleUser("Vodič");
+                userRepository.save(user);
+                return true;
+            }
+        }
+        return false;
+    }
 }

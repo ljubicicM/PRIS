@@ -33,4 +33,20 @@ public class ArtisticMovementService {
     public ArtisticMovement findById(Integer artisticMovementId) {
         return artisticMovementRepository.findById(artisticMovementId).get();
     }
+
+    public boolean updateArtisticMovementTexts(int id, int generality, String text) {
+        ArtisticMovement artisticMovement = artisticMovementRepository.findById(id).get();
+        if (artisticMovement != null) {
+            if (generality == 1) {
+                artisticMovement.setText1Movement(text);
+            } else if (generality == 2) {
+                artisticMovement.setText2Movement(text);
+            } else if (generality == 3) {
+                artisticMovement.setText3Movement(text);
+            }
+            artisticMovementRepository.save(artisticMovement);
+            return true;
+        }
+        return false;
+    }
 }

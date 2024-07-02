@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import Backend.model.Epoch;
 import Backend.services.EpochService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/epoch")
@@ -27,5 +29,11 @@ public class EpochController {
         Epoch savedEpoch = epochService.saveEpoch(epochDTO);
 
         return savedEpoch;
+    }
+
+    @PutMapping("updateEpochTexts")
+    public boolean updateEpochTexts(@RequestParam(value = "id") int id, @RequestParam(value = "gen") int generality,
+            @RequestParam(value = "text") String text) {
+        return epochService.updateEpochTexts(id, generality, text);
     }
 }

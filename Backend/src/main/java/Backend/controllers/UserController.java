@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import Backend.model.User;
 import Backend.services.UserService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/user")
@@ -30,4 +33,13 @@ public class UserController {
         userService.initAdmin();
     }
 
+    @DeleteMapping("/deleteUserById")
+    public boolean deleteUserById(@RequestParam(value = "id") int id) {
+        return userService.deleteUserById(id);
+    }
+
+    @PutMapping("updateRole")
+    public boolean updateUserRole(@RequestParam(value = "id") int id) {
+        return userService.updateUserRole(id);
+    }
 }

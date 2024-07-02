@@ -33,4 +33,20 @@ public class AuthorService {
     public Author findById(Integer id) {
         return authorRepository.findById(id).get();
     }
+
+    public boolean updateAuthorTexts(int id, int generality, String text) {
+        Author author = authorRepository.findById(id).get();
+        if (author != null) {
+            if (generality == 1) {
+                author.setText1Author(text);
+            } else if (generality == 2) {
+                author.setText2Author(text);
+            } else if (generality == 3) {
+                author.setText3Author(text);
+            }
+            authorRepository.save(author);
+            return true;
+        }
+        return false;
+    }
 }

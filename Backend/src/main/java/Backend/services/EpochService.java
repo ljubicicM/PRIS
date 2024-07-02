@@ -31,4 +31,20 @@ public class EpochService {
     public Epoch findById(Integer id) {
         return epochRepository.findById(id).get();
     }
+
+    public boolean updateEpochTexts(int id, int generality, String text) {
+        Epoch epoch = epochRepository.findById(id).get();
+        if (epoch != null) {
+            if (generality == 1) {
+                epoch.setText1Epoch(text);
+            } else if (generality == 2) {
+                epoch.setText2Epoch(text);
+            } else if (generality == 3) {
+                epoch.setText3Epoch(text);
+            }
+            epochRepository.save(epoch);
+            return true;
+        }
+        return false;
+    }
 }
