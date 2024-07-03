@@ -31,7 +31,7 @@ export const RegisterPage = () => {
             passwordUser: password as string,
             emailUser: email as string,
             phoneUser: phoneNumber as string,
-            roleUser: radioValue as string
+            roleUser: (radioValue === "Turista" ? "Turista" : "Pending") as string
         }).then((response) => {
             if (response.data) {
                 setIsNavBarVisible(false);
