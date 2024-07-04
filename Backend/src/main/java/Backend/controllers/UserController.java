@@ -1,13 +1,13 @@
 package Backend.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import Backend.model.User;
 import Backend.services.UserService;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-
 
 @RestController
 @RequestMapping("/user")
@@ -41,5 +41,11 @@ public class UserController {
     @PutMapping("updateRole")
     public boolean updateUserRole(@RequestParam(value = "id") int id) {
         return userService.updateUserRole(id);
+    }
+
+    @GetMapping("/pendingUsers")
+    public List<User> getPendingUsers() {
+        List<User> pendingUsers = userService.getPendingUsers();
+        return pendingUsers;
     }
 }

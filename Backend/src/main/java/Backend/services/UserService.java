@@ -7,6 +7,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import Backend.model.User;
 import Backend.repositories.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -32,6 +34,9 @@ public class UserService {
 
         User user = userRepository.findByEmail(userEmail);
 
+        if (user.getRoleUser().equals("Pending")) {
+            return null;
+        }
         if (passwordEncoder.matches(passwordUser, user.getPasswordUser())) {
             return user;
         }
@@ -67,5 +72,9 @@ public class UserService {
             }
         }
         return false;
+    }
+
+    public List<User> getPendingUsers() {
+        return userRepository.findByRoleUser("Pending");
     }
 }

@@ -47,7 +47,7 @@ export const LoginPage = () => {
                     setIsNavBarVisible(true);
                     navigate('/');
                 } else {
-                    alert('Wrong email or password');
+                    alert('Wrong email or password or account is pending approval!');
                 }
             }).catch((error) => {
                 console.log(error)
