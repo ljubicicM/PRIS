@@ -16,6 +16,7 @@ import { SaveArtPiecePage } from './routes/SaveArtPiecePage';
 import { SavedRoutesPage } from './routes/SavedRoutesPage';
 import { LogoutProcess } from './routes/LogoutProcess';
 import { UpdateTextPage } from './routes/UpdateTextPage';
+import { ApproveGuidePage } from './routes/ApproveGuidePage';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path="save/artpiece" element={<SaveArtPiecePage />} />
             <Route path="/savedroutes" element={<SavedRoutesPage />} />
             <Route path="/update" element={<UpdateTextPage />} />
+            <Route path="/approveguide" element={<ApproveGuidePage />} />
             <Route path="/logout" element={<LogoutProcess />} />
           </Routes>
         </Router>

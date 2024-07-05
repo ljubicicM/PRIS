@@ -1,0 +1,19 @@
+.pending-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+}
+
+.guide-text {
+    font-size: 28px;
+    width: 250px
+}
+
+.pending-guides {
+    overflow-y: auto;
+    height: 500px;
+}

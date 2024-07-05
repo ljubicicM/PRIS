@@ -65,7 +65,7 @@ public class UserService {
     public boolean updateUserRole(int id) {
         if (userRepository.findById(id) != null) {
             User user = userRepository.findById(id).get();
-            if (user.getRoleUser().equals("PENDING")) {
+            if (user.getRoleUser().equals("Pending")) {
                 user.setRoleUser("Vodič");
                 userRepository.save(user);
                 return true;

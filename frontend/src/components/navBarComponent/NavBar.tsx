@@ -25,7 +25,7 @@ export const NavBar = () => {
                     return [{ label: "Home Page", url: "/" }, { label: "Add Art Piece", url: "/save/artpiece" }, { label: "Add Epoch", url: "/save/epoch" },
                     { label: "Add Author", url: "/save/author" }, { label: "Add Artistic Movement", url: "/save/artisticmovement" },
                     { label: "Create Route", url: "/cr/searchby" }, { label: "Saved Routes", url: "/savedroutes" }, { label: "Update Text", url: "/update" },
-                    { label: "Logout", url: "/logout" }];
+                    { label: "Approve Guide", url: "/approveguide" }, { label: "Logout", url: "/logout" }];
                 default:
                     return [];
             }
