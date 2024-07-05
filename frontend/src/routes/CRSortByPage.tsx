@@ -12,6 +12,9 @@ export const CRSortByPage = () => {
     const [artPieces, setArtPieces] = useState(state.state.artPieces);
     const [time, setTime] = useState(state.state.time);
 
+    if (localStorage.getItem('userType') === 'guide') {
+        navigate('/');
+    }
 
     const handleNavigate = () => {
         return () => {

@@ -1,11 +1,18 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles/approveguide.css"
 import { Button } from "../components/buttonComponent/Button";
+import { useNavigate } from "react-router-dom";
 
 export const ApproveGuidePage = () => {
+    const navigate = useNavigate();
     const [pendingGuides, setPendingGuides] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
+
+    if (localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
+
 
     const approveGuide = async (guideId: number) => {
         axios.put('http://localhost:8082/user/updateRole?id=' + guideId)

@@ -3,7 +3,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useState } from "react";
 import "./styles/savedRoutes.css"
-import { Context } from "../context";
 import { RadioButtons } from "../components/radioButtonComponent/RadioButtons";
 import axios from "axios";
 import { Button } from "../components/buttonComponent/Button";
@@ -11,10 +10,12 @@ import { useNavigate } from "react-router-dom";
 
 export const SavedRoutesPage = () => {
     const navigate = useNavigate();
-    const { userType, userId } = useContext(Context) as any;
     const [radioValue, setRadioValue] = useState("");
     const [routes, setRoutes] = useState([]);
-
+    
+    if (localStorage.getItem('userType') === 'guide') {
+        navigate('/');
+    }
 
     const handlesetRadio = (value: string) => {
         setRadioValue(value);
@@ -50,7 +51,7 @@ export const SavedRoutesPage = () => {
     }
 
     const loadPersonalRoutes = async () => {
-        await axios.get(`http://localhost:8082/route/getRoutesForUser?userId=${userId}`).then(async (response) => {
+        await axios.get(`http://localhost:8082/route/getRoutesForUser?userId=${localStorage.getItem('userId')}`).then(async (response) => {
             if (response.data) {
                 let tempRoutes = await addArtPiecesToRoutes(response.data.slice());
                 console.log(tempRoutes[0].artPieces);
@@ -85,11 +86,11 @@ export const SavedRoutesPage = () => {
         }
     }
 
-    if (userType === "") {
+    if (localStorage.getItem('userType') === "") {
         loadAllRoutes();
     }
 
-    if (userType === 'admin' || userType === 'tourist') {
+    if (localStorage.getItem('userType') === 'admin' || localStorage.getItem('userType') === 'tourist') {
         return (
             <div className="saved-routes-container-outer">
                 <div className="saved-routes-container">

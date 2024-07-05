@@ -4,14 +4,19 @@ import "./styles/savePages.css"
 import { Button } from "../components/buttonComponent/Button";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SaveArtisticMovement = () => {
-
+    const navigate = useNavigate();
     const [artmovName, setartmovName] = useState("");
 
     const [artmovDescription1, setartmovDescription1] = useState("");
     const [artmovDescription2, setartmovDescription2] = useState("");
     const [artmovDescription3, setartmovDescription3] = useState("");
+
+    if (localStorage.getItem('userType') !== 'guide' && localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
 
     const saveartmov = () => {
         axios.post("http://localhost:8082/artisticMovement/saveArtisticMovement", {

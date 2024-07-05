@@ -10,10 +10,12 @@
 
 .guide-text {
     font-size: 28px;
-    width: 250px
+    width: 250px;
+    padding: 10px;
 }
 
 .pending-guides {
     overflow-y: auto;
     height: 500px;
+    padding-right: 13.75px;
 }

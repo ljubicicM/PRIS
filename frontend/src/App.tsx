@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { RegisterPage } from './routes/RegisterPage';
 import { LoginPage } from './routes/LoginPage';
 import { CRSearchByPage } from './routes/CRSearchByPage';
-import { Context } from './context';
-import { useState } from 'react';
 import { NavBar } from './components/navBarComponent/NavBar';
 import { HomePage } from './routes/HomePage';
 import { CRSortByPage } from './routes/CRSortByPage';
@@ -21,36 +19,27 @@ import { ApproveGuidePage } from './routes/ApproveGuidePage';
 
 function App() {
 
-  const [userType, setUserType] = useState("");
-  const [userId, setUserId] = useState(0);
-  const [isNavBarVisible, setIsNavBarVisible] = useState(true);
   return (
     <div className="App">
-      <Context.Provider value={{
-        userType: userType, setUserType: setUserType,
-        userId: userId, setUserId: setUserId,
-        isNavBarVisible: isNavBarVisible, setIsNavBarVisible: setIsNavBarVisible
-      }}>
-        <Router>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/cr/searchby" element={<CRSearchByPage />} />
-            <Route path="/cr/sortby" element={<CRSortByPage />} />
-            <Route path="/cr/choosecontext" element={<CRChooseContextPage />} />
-            <Route path="/save/epoch" element={<SaveEpochPage />} />
-            <Route path="save/artist" element={<SaveArtistPage />} />
-            <Route path="save/artisticmovement" element={<SaveArtisticMovement />} />
-            <Route path="save/artpiece" element={<SaveArtPiecePage />} />
-            <Route path="/savedroutes" element={<SavedRoutesPage />} />
-            <Route path="/update" element={<UpdateTextPage />} />
-            <Route path="/approveguide" element={<ApproveGuidePage />} />
-            <Route path="/logout" element={<LogoutProcess />} />
-          </Routes>
-        </Router>
-      </Context.Provider>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/cr/searchby" element={<CRSearchByPage />} />
+          <Route path="/cr/sortby" element={<CRSortByPage />} />
+          <Route path="/cr/choosecontext" element={<CRChooseContextPage />} />
+          <Route path="/save/epoch" element={<SaveEpochPage />} />
+          <Route path="save/author" element={<SaveArtistPage />} />
+          <Route path="save/artisticmovement" element={<SaveArtisticMovement />} />
+          <Route path="save/artpiece" element={<SaveArtPiecePage />} />
+          <Route path="/savedroutes" element={<SavedRoutesPage />} />
+          <Route path="/update" element={<UpdateTextPage />} />
+          <Route path="/approveguide" element={<ApproveGuidePage />} />
+          <Route path="/logout" element={<LogoutProcess />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

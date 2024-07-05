@@ -4,8 +4,10 @@ import { Textfield } from "../components/textFieldComponent/textfield";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
 import axios from "axios";
 import { Dropdown } from "../components/dropdownComponent/dropdown";
+import { useNavigate } from "react-router-dom";
 
 export const SaveArtPiecePage = () => {
+    const navigate = useNavigate();
     const [artPieceName, setArtPieceName] = useState("");
     const [artPieceDescription1, setArtPieceDescription1] = useState("");
     const [artPieceAddress, setArtPieceAddress] = useState("");
@@ -21,6 +23,9 @@ export const SaveArtPiecePage = () => {
     const [epochs, setEpochs] = useState([]);
     const [authors, setAuthors] = useState([]);
 
+    if (localStorage.getItem('userType') !== 'guide' && localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
     const SaveArtPiece = () => {
         axios.post("http://localhost:8082/artPiece/saveArtPiece", {
             name: artPieceName,

@@ -1,16 +1,14 @@
 /* eslint-disable eqeqeq */
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '../components/buttonComponent/Button';
 import { PasswordField } from '../components/passwordFieldComponent/password';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import './styles/loginRegisterPage.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Context } from '../context';
 
 export const LoginPage = () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { userId, setUserType, setUserId, setIsNavBarVisible } = useContext(Context) as any;
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -28,23 +26,22 @@ export const LoginPage = () => {
                 if (response.data.id != null && response.data.id != "" && response.data.id != undefined) {
                     switch (response.data.roleUser) {
                         case 'Turista':
-                            setUserType('tourist');
-                            setUserId(response.data.id);
+                            localStorage.setItem('userId', response.data.id);
+                            localStorage.setItem('userType', 'tourist');
                             break;
                         case 'Vodič':
-                            setUserType('guide');
-                            setUserId(response.data.id);
+                            localStorage.setItem('userId', response.data.id);
+                            localStorage.setItem('userType', 'guide');
                             break;
                         case 'admin':
-                            setUserType('admin');
-                            setUserId(response.data.id);
+                            localStorage.setItem('userId', response.data.id);
+                            localStorage.setItem('userType', 'admin');
                             break;
                         default:
-                            setUserType('');
-                            setUserId('');
+                            localStorage.setItem('userId', '');
+                            localStorage.setItem('userType', '');
                             break;
                     }
-                    setIsNavBarVisible(true);
                     navigate('/');
                 } else {
                     alert('Wrong email or password or account is pending approval!');

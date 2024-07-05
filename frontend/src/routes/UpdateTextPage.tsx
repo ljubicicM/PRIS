@@ -4,8 +4,10 @@ import { Dropdown } from "../components/dropdownComponent/dropdown";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
 import { Button } from "../components/buttonComponent/Button";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const UpdateTextPage = () => {
+    const navigate = useNavigate();
     const [selectedOption, setSelectedOption] = useState(1);
     const [selectGenerality, setSelectGenerality] = useState(1);
     const [text, setText] = useState("");
@@ -18,6 +20,10 @@ export const UpdateTextPage = () => {
     const [selectedEpoch, setSelectedEpoch] = useState(1);
     const [selectedAuthor, setSelectedAuthor] = useState(1);
     const [selectedArtisticMovement, setSelectedArtisticMovement] = useState(1);
+
+    if (localStorage.getItem('userType') !== 'guide' && localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
 
     const handleClick = async () => {
         console.log(selectedOption);
