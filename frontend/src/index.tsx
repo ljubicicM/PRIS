@@ -18,7 +18,7 @@ if (localStorage.getItem('loadedToken') != 'true') {
   localStorage.setItem('userType', '');
   localStorage.setItem('userId', '');
 }
-localStorage.setItem('loadedToken', 'ture');
+localStorage.setItem('loadedToken', 'true');
 
 root.render(
   <React.StrictMode>
