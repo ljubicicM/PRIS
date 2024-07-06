@@ -12,7 +12,7 @@ export const SavedRoutesPage = () => {
     const navigate = useNavigate();
     const [radioValue, setRadioValue] = useState("");
     const [routes, setRoutes] = useState([]);
-    
+
     if (localStorage.getItem('userType') === 'guide') {
         navigate('/');
     }
@@ -30,7 +30,6 @@ export const SavedRoutesPage = () => {
         await axios.get('http://localhost:8082/route/getGlobalRoutes').then(async (response) => {
             if (response.data) {
                 let tempRoutes = await addArtPiecesToRoutes(response.data.slice());
-                console.log(tempRoutes[0].artPieces);
                 setRoutes(tempRoutes);
             }
         }).catch((error) => {
@@ -54,7 +53,6 @@ export const SavedRoutesPage = () => {
         await axios.get(`http://localhost:8082/route/getRoutesForUser?userId=${localStorage.getItem('userId')}`).then(async (response) => {
             if (response.data) {
                 let tempRoutes = await addArtPiecesToRoutes(response.data.slice());
-                console.log(tempRoutes[0].artPieces);
                 setRoutes(tempRoutes);
             }
         }).catch((error) => {
@@ -101,7 +99,7 @@ export const SavedRoutesPage = () => {
                         <h2>Route Duration</h2>
                         <h2>Route Desctription</h2>
                         <h3>Artpieces In Route</h3>
-                        <h3>Use Route</h3>
+                        <h2>Use Route</h2>
                     </div>
                     <div className="saved-routes-box">
                         {routes.map((route: any) => {
