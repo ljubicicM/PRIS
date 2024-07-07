@@ -1,24 +1,27 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './styles/routePages.css';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { MultipleCheckbox } from '../components/checkBoxComponent/MultipleCheckbox';
 import { Dropdown } from '../components/dropdownComponent/dropdown';
-import { Context } from '../context';
 import { Textfield } from '../components/textFieldComponent/textfield';
 import { Checkbox } from '../components/checkBoxComponent/CheckBox';
 import { Button } from '../components/buttonComponent/Button';
 import axios from 'axios';
 
 export const CRChooseContextPage = () => {
+    const navigate = useNavigate();
     const state = useLocation();
     const [artPieces, setArtPieces] = useState(state.state.artPieces);
     const [time, setTime] = useState(state.state.time);
-    const { userType, userId } = useContext(Context) as any;
     const [generality, setGenerality] = useState(1);
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [isVisable, setIsVisable] = useState(false);
+
+    if (localStorage.getItem('userType') === 'guide') {
+        navigate('/');
+    }
 
     const createRouteString = (artPieces: any) => {
         let routeString = '';
@@ -51,7 +54,7 @@ export const CRChooseContextPage = () => {
     }
     const handleSaveRoute = async () => {
         await axios.post('http://localhost:8082/route/saveRoute', {
-            userId: userId,
+            userId: localStorage.getItem('userId'),
             artPieces: artPieces,
             routeName: name,
             routeDescription: description,
@@ -90,7 +93,7 @@ export const CRChooseContextPage = () => {
                         options={[{ id: 1, value: "Local Tourist" }, { id: 2, value: "Serbian Tourist" }, { id: 3, value: "European Tourist" }]} />
                     <h1 className='route-create-pdf-text' onClick={() => handlePDF()}>Generate PDF guide</h1>
                 </div>
-                {userType === "admin" || userType === "tourist" ?
+                {localStorage.getItem('userType') === "admin" || localStorage.getItem('userType') === "tourist" ?
                     <div className='route-create-save-container'>
                         <div className='route-create-save-input'>
                             <Textfield value={name} setValue={setName} headerText='Route name' placeholder='Route name' />

@@ -22,9 +22,6 @@ public class Epoch {
 	@Column(length = 5000)
 	private String text3Epoch;
 
-	@OneToMany(mappedBy = "epoch")
-	private List<SignificantEvent> significantEvents;
-
 	@JsonIgnore
 	@OneToMany(mappedBy = "epoch")
 	private List<ArtPiece> artPieces;
@@ -77,14 +74,6 @@ public class Epoch {
 
 	public void setText3Epoch(String text3Epoch) {
 		this.text3Epoch = text3Epoch;
-	}
-
-	public List<SignificantEvent> getSignificantEvents() {
-		return this.significantEvents;
-	}
-
-	public void setSignificantEvents(List<SignificantEvent> significantEvents) {
-		this.significantEvents = significantEvents;
 	}
 
 	public List<ArtPiece> getArtPieces() {

@@ -4,8 +4,10 @@ import "./styles/savePages.css"
 import { Button } from "../components/buttonComponent/Button";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SaveArtistPage = () => {
+    const navigate = useNavigate();
 
     const [artistName, setartistName] = useState("");
     const [artistLastName, setartistLastName] = useState("");
@@ -13,6 +15,10 @@ export const SaveArtistPage = () => {
     const [artistDescription1, setartistDescription1] = useState("");
     const [artistDescription2, setartistDescription2] = useState("");
     const [artistDescription3, setartistDescription3] = useState("");
+
+    if (localStorage.getItem('userType') !== 'guide' && localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
 
     const saveartist = () => {
         axios.post("http://localhost:8082/author/saveAuthor", {

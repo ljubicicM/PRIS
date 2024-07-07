@@ -68,4 +68,14 @@ public class ArtPieceService {
         return artPieceRepository.findByRouteId(routeId);
     }
 
+    public boolean updateArtPieceDescription(String id, String description) {
+        ArtPiece artPiece = artPieceRepository.findByID(Integer.parseInt(id));
+        if (artPiece != null) {
+            artPiece.setDescription(description);
+            artPieceRepository.save(artPiece);
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -29,4 +29,10 @@ public class AuthorController {
 
         return savedAuthor == null;
     }
+
+    @PutMapping("updateAuthorTexts")
+    public boolean updateAuthorTexts(@RequestParam(value = "id") int id, @RequestParam(value = "gen") int generality,
+            @RequestParam(value = "text") String text) {
+        return authorService.updateAuthorTexts(id, generality, text);
+    }
 }

@@ -34,6 +34,9 @@ public class UserService {
 
         User user = userRepository.findByEmail(userEmail);
 
+        if (user.getRoleUser().equals("Pending")) {
+            return null;
+        }
         if (passwordEncoder.matches(passwordUser, user.getPasswordUser())) {
             return user;
         }
@@ -51,7 +54,27 @@ public class UserService {
         this.registerUser(admin);
     }
 
+    public boolean deleteUserById(int id) {
+        if (userRepository.findById(id) != null) {
+            userRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateUserRole(int id) {
+        if (userRepository.findById(id) != null) {
+            User user = userRepository.findById(id).get();
+            if (user.getRoleUser().equals("Pending")) {
+                user.setRoleUser("Vodič");
+                userRepository.save(user);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<User> getPendingUsers() {
-        return userRepository.findByRoleUser("pending");
+        return userRepository.findByRoleUser("Pending");
     }
 }

@@ -4,11 +4,16 @@ import "./styles/savePages.css"
 import { Button } from "../components/buttonComponent/Button";
 import { TextareaComponent } from "../components/textareaComponent/textarea";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SaveEpochPage = () => {
-
+    const navigate = useNavigate();
     const [epochName, setEpochName] = useState("");
 
+    if (localStorage.getItem('userType') !== 'guide' && localStorage.getItem('userType') !== 'admin') {
+        navigate('/');
+    }
+    
     const [epochDescription1, setEpochDescription1] = useState("");
     const [epochDescription2, setEpochDescription2] = useState("");
     const [epochDescription3, setEpochDescription3] = useState("");

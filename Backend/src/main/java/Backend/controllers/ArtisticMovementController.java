@@ -29,4 +29,10 @@ public class ArtisticMovementController {
 
         return savedArtisticMovement;
     }
+
+    @PutMapping("updateArtisticMovementTexts")
+    public boolean updateArtisticMovementTexts(@RequestParam(value = "id") int id, @RequestParam(value = "gen") int generality,
+            @RequestParam(value = "text") String text) {
+        return artisticMovementService.updateArtisticMovementTexts(id, generality, text);
+    }
 }

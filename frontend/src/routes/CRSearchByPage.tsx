@@ -23,6 +23,10 @@ export const CRSearchByPage = () => {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
 
+    if (localStorage.getItem('userType') === 'guide') {
+        navigate('/');
+    }
+
     const loadYearsCreated = async () => {
         const response = await axios.get('http://localhost:8082/artPiece/yearsCreated')
         if (response.data) {
