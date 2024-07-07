@@ -1,0 +1,52 @@
+.textfield-container {
+    border: var(--text-color) 1px solid !important;
+    height: 50px !important;
+    border-radius: 5px !important;
+    background-color: var(--primary-color);
+    display: flex;
+    height: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 16px;
+}
+
+.textfield-container.large {
+    width: 350px;
+}
+
+.textfield-container.medium {
+    width: 265px;
+}
+
+.textfield-container.small {
+    width: 150px;
+}
+
+.textfield-header {
+    text-align: left;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 4px;
+    padding-left: 16px;
+}
+
+.textfield {
+    outline: none !important;
+    border: none !important;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    width: 97.5%;
+}
+
+.textfield::placeholder {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.6;
+}
