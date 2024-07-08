@@ -43,7 +43,7 @@ export const SaveArtisticMovement = () => {
                 <TextareaComponent label="Artistic Movement Description 1" value={artmovDescription1} onChange={(e: any) => setartmovDescription1(e.target.value)} placeholder="Artistic Movement Description 1" />
                 <TextareaComponent label="Artistic Movement Description 2" value={artmovDescription2} onChange={(e: any) => setartmovDescription2(e.target.value)} placeholder="Artistic Movement Description 2" />
                 <TextareaComponent label="Artistic Movement Description 3" value={artmovDescription3} onChange={(e: any) => setartmovDescription3(e.target.value)} placeholder="Artistic Movement Description 3" />
-                <Button label="Save Artistic Movement" size="medium" onClick={saveartmov}
+                <Button label="Save Movement" size="medium" onClick={saveartmov}
                     isEnabeld={artmovName !== "" && artmovDescription1 !== "" && artmovDescription2 !== "" && artmovDescription3 !== ""} />
             </div>
         </div>
